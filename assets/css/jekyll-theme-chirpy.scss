@@ -1,0 +1,22 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+#sidebar .site-subtitle {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-style: normal !important;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  word-spacing: normal;
+  line-height: 1.7;
+}
