@@ -22,7 +22,7 @@
 }
 
 /* 다크 모드 색상 */
-html:root([data-bs-theme="dark"]) {
+:root[data-bs-theme="dark"] {
   --main-bg: #10151e;
   --sidebar-bg: #131b27;
   --card-bg: #182230;
