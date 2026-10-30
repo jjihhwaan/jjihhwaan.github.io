@@ -20,3 +20,59 @@
   word-spacing: normal;
   line-height: 1.7;
 }
+
+/* 다크 모드 색상 */
+html:not([data-mode="light"]) {
+  --main-bg: #10151e;
+  --sidebar-bg: #131b27;
+  --card-bg: #182230;
+  --card-hover-bg: #233547;
+  --heading-color: #edf3fa;
+  --site-title-color: #edf3fa;
+  --site-subtitle-color: #a8b6c8;
+  --sidebar-active-color: #72dfce;
+  --sidebar-hover-bg: #20313d;
+  --link-color: #72dfce;
+}
+
+/* 블로그 이름과 프로필 */
+#sidebar .site-title {
+  font-size: 1.65rem;
+  letter-spacing: -0.04em;
+}
+
+#sidebar #avatar {
+  border: 2px solid var(--sidebar-active-color);
+  box-shadow: 0 0 22px rgba(114, 223, 206, 0.12);
+}
+
+/* 선택한 메뉴 */
+#sidebar .nav-item.active .nav-link {
+  background: var(--sidebar-hover-bg);
+  box-shadow: inset 3px 0 0 var(--sidebar-active-color);
+}
+
+/* 홈 화면의 글 카드 */
+#post-list .post-preview {
+  border: 1px solid rgba(140, 160, 185, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s ease;
+}
+
+#post-list .post-preview:hover {
+  border-color: var(--link-color);
+}
+
+#post-list .post-preview::before {
+  border-radius: inherit;
+}
+
+#post-list .card-title {
+  letter-spacing: -0.035em;
+  line-height: 1.5;
+}
+
+#post-list .card-text {
+  line-height: 1.85;
+}
