@@ -2,7 +2,7 @@
 title: "GitHub Pages 블로그 만들기"
 date: 2026-10-29 00:00:00 +0900
 categories: [개발]
-tags: [github-pages, chirpy, knights-frontier]
+tags: [github-pages, knights-frontier]
 description: "Knights Frontier 첫 미션으로 만든 블로그."
 ---
 
