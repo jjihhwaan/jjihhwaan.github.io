@@ -4,6 +4,16 @@ title: 홈
 ---
 
 <style>
+  /* 본문의 중복 홈 제목 숨기기 */
+  main > article > h1.dynamic-title {
+    display: none;
+  }
+
+  /* 홈 오른쪽 인기 태그 숨기기 */
+  #panel-wrapper .access > section:not(#access-lastmod) {
+    display: none;
+  }
+
   .journal-home {
     --accent: var(--link-color);
   }
@@ -135,43 +145,60 @@ title: 홈
 
   <section aria-labelledby="topics-title">
     <h2 class="section-title" id="topics-title">카테고리</h2>
+
     <div class="topics">
       <a class="topic" href="{{ '/categories/개발/' | relative_url }}">
-        <span>개발</span><span aria-hidden="true">↗</span>
+        <span>개발</span>
+        <span aria-hidden="true">↗</span>
       </a>
+
       <a class="topic" href="{{ '/categories/ctf-wargame/' | relative_url }}">
-        <span>CTF/Wargame</span><span aria-hidden="true">↗</span>
+        <span>CTF/Wargame</span>
+        <span aria-hidden="true">↗</span>
       </a>
+
       <a class="topic" href="{{ '/categories/bug-bounty/' | relative_url }}">
-        <span>Bug Bounty</span><span aria-hidden="true">↗</span>
+        <span>Bug Bounty</span>
+        <span aria-hidden="true">↗</span>
       </a>
+
       <a class="topic" href="{{ '/categories/블로그-기술문서/' | relative_url }}">
-        <span>블로그/기술문서</span><span aria-hidden="true">↗</span>
+        <span>블로그/기술문서</span>
+        <span aria-hidden="true">↗</span>
       </a>
+
       <a class="topic" href="{{ '/categories/논문-컨퍼런스/' | relative_url }}">
-        <span>논문/컨퍼런스</span><span aria-hidden="true">↗</span>
+        <span>논문/컨퍼런스</span>
+        <span aria-hidden="true">↗</span>
       </a>
+
       <a class="topic" href="{{ '/categories/공모전-자격증/' | relative_url }}">
-        <span>공모전/자격증</span><span aria-hidden="true">↗</span>
+        <span>공모전/자격증</span>
+        <span aria-hidden="true">↗</span>
       </a>
     </div>
   </section>
 
   <section aria-labelledby="record-title">
     <h2 class="section-title" id="record-title">첫 기록</h2>
+
     {% for post in site.posts %}
       {% if post.path contains '2026-10-29-blog-start.md' %}
         <a class="featured" href="{{ post.url | relative_url }}">
-          <span class="date">{{ post.date | date: '%Y.%m.%d' }} · 개발</span>
+          <span class="date">
+            {{ post.date | date: '%Y.%m.%d' }} · 개발
+          </span>
           <h3>{{ post.title | escape }}</h3>
           <p>
             Knights Frontier 첫 미션으로 만든 블로그.
-            글이 안 보이던 문제부터 배포 오류까지, 만들면서 겪은 일을 정리했다.
+            글이 안 보이던 문제부터 배포 오류까지,
+            만들면서 겪은 일을 정리했다.
           </p>
           <span class="read-more">읽어보기 →</span>
         </a>
       {% endif %}
     {% endfor %}
+
     <p class="archive-link">
       <a href="{{ '/archives/' | relative_url }}">전체 글 보기 →</a>
     </p>
