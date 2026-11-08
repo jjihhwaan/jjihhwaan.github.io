@@ -5,7 +5,7 @@ categories: [블로그/기술문서]
 tags: [knights-frontier, mission]
 ---
 
-Knights Frontier 3기 두 번째 미션을 통해 현재 제가 중요하게 생각하는 가치와 앞으로의 목표를 정리해 보았습니다.
+Knights Frontier 3기 필수 미션을 통해 현재 제가 중요하게 생각하는 가치와 앞으로의 목표를 정리해 보았습니다.
 
 ## 1. 현재 내가 중요하게 생각하는 가치
 
