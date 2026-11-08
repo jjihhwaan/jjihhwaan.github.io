@@ -1,7 +1,7 @@
 ---
 title: "나의 가치관과 앞으로의 7개월"
 date: 2026-11-09 00:00:00 +0900
-categories: [블로그, 기술문서]
+categories: [블로그/기술문서]
 tags: [knights-frontier, mission]
 ---
 
