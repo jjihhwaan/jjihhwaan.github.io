@@ -1,0 +1,133 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Game-menu inspired typography. Text fonts retain Korean readability. */
+@font-face {
+  font-family: "Barlow Condensed"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873_3E.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow Condensed"; font-style: italic; font-weight: 800 900; font-display: swap;
+  src: url("https://fonts.gstatic.com/s/barlowcondensed/v13/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrW3bWvA.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans KR"; font-style: normal; font-weight: 400 600; font-display: swap;
+  src: url("https://fonts.gstatic.com/s/notosanskr/v40/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLQ.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans KR"; font-style: normal; font-weight: 700 900; font-display: swap;
+  src: url("https://fonts.gstatic.com/s/notosanskr/v40/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzmo1eLQ.ttf") format("truetype");
+}
+
+:root {
+  --ow-orange: #f99e1a;
+  --ow-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --ow-body: "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+:root[data-bs-theme="dark"] {
+  --main-bg: #252f40;
+  --sidebar-bg: #202a39;
+  --card-bg: #354257;
+  --card-hover-bg: #43536c;
+  --main-border-color: #4b5970;
+  --text-color: #d7e0ea;
+  --text-muted-color: #a3b2c5;
+  --heading-color: #f3f6fa;
+  --site-title-color: #f3f6fa;
+  --site-subtitle-color: #b8c5d5;
+  --sidebar-active-color: #ffac55;
+  --sidebar-hover-bg: #26364b;
+  --link-color: #ffb76f;
+}
+:root[data-bs-theme="light"] {
+  --main-bg: #f1f4f8;
+  --sidebar-bg: #e4eaf1;
+  --card-bg: #ffffff;
+  --sidebar-active-color: #994300;
+  --link-color: #994300;
+}
+body { font-family: var(--ow-body); }
+h1, h2, h3, h4 { font-family: var(--ow-body); letter-spacing: -.035em; }
+#sidebar { border-right: 1px solid var(--main-border-color); }
+#sidebar .site-title {
+  font-family: var(--ow-display); font-size: 2.2rem; font-style: italic;
+  font-weight: 800; letter-spacing: .01em; text-transform: uppercase;
+}
+#sidebar .site-subtitle {
+  font-family: var(--ow-body); font-style: normal !important;
+  font-size: .78rem; letter-spacing: -.025em; line-height: 1.8;
+}
+#sidebar #avatar { border: 3px solid var(--ow-orange); box-shadow: 7px 7px 0 #f99e1a15; }
+#sidebar ul li.nav-item a.nav-link { border-radius: 2px; letter-spacing: .035em; font-weight: 800; }
+#sidebar .nav-item.active .nav-link { background: var(--sidebar-hover-bg); box-shadow: inset 3px 0 var(--ow-orange); }
+/* Koverwatch: source https://blog.naver.com/skysmj/220729927533 */
+@font-face {font-family:Koverwatch;src:url('../fonts/koverwatch.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+#sidebar .site-title,#sidebar .nav-link {font-family:Koverwatch,var(--ow-body);font-weight:400;font-style:normal}
+#sidebar .nav-link {font-size:1.35rem}
+body:has(.journal) {background:#252f40}
+body:has(.journal) :is(#sidebar,#topbar-wrapper,#panel-wrapper,#tail-wrapper,#back-to-top,main > article > .dynamic-title){display:none!important}
+body:has(.journal) #main-wrapper{margin:0!important;padding:0!important}
+body:has(.journal) #main-wrapper > .container{max-width:none;width:100%;padding:0!important}
+body:has(.journal) #main-wrapper > .container > .row{margin:0!important}
+body:has(.journal) main{width:100%;max-width:none;flex:0 0 100%;padding:0!important}
+body:has(.journal) main > article,body:has(.journal) main > article > .content{padding:0!important;margin:0!important}
+.journal{color:#e7edf4;background:radial-gradient(ellipse at 85% 0%,#52617a70,transparent 48%),#252f40;min-height:100svh;font-family:var(--ow-body);font-style:normal}
+.journal *{box-sizing:border-box}
+.journal a{border:0!important;text-decoration:none!important;color:inherit}
+.journal :is(h1,h2,h3,p){margin:0}
+.journal .anchor{display:none}
+.journal-header{height:94px;max-width:1320px;padding:0 60px;margin:auto;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff15}
+.journal .wordmark{font:400 35px Koverwatch,sans-serif;letter-spacing:.025em}.wordmark span{color:#f99e1a}
+.journal-header nav{display:flex;gap:35px;height:100%;align-items:center}
+.journal-header nav a{font:400 25px Koverwatch,sans-serif;position:relative;color:#bac5d3}
+.journal-header nav a.active{color:#f99e1a}.journal-header nav a.active:after{content:'';position:absolute;bottom:-30px;left:0;right:0;height:3px;background:#f99e1a}
+.journal a:hover{color:#ffc25a}.journal a:focus-visible{outline:2px solid #ffc25a;outline-offset:5px}
+.journal-body{max-width:1200px;margin:auto;padding:0 60px}
+.journal-intro{padding:72px 0 60px;display:flex;justify-content:space-between;align-items:center;gap:40px}
+.journal .eyebrow{font:600 12px var(--ow-display);letter-spacing:.2em;color:#c1ccd9;margin-bottom:22px}.eyebrow span{color:#6e819b}
+.journal h1{font:400 clamp(55px,5.6vw,80px)/1.06 Koverwatch,sans-serif;letter-spacing:.005em;color:#edf2f8}
+.journal h1 em{font-style:normal;color:#f99e1a}
+.journal .intro-description{color:#bcc8d8;font-size:13px;line-height:1.9;margin-top:26px}
+.profile-note{width:250px;border-left:2px solid #f99e1a;padding:4px 0 5px 25px;flex-shrink:0}
+.profile-label{display:block;font:600 11px var(--ow-display);letter-spacing:.17em;color:#a1b0c5;margin-bottom:14px}
+.profile-note strong{font:400 32px Koverwatch,sans-serif}.profile-note p{font-size:12px;color:#aebed0;line-height:1.9;margin:10px 0 17px}.frontier{font-size:11px;color:#d4dce7}
+.section-label{display:flex;justify-content:space-between;align-items:center;margin:0 0 18px}
+.journal h2{font:400 29px Koverwatch,sans-serif;color:#e9eff7;letter-spacing:.02em}.section-label > span{font:600 11px var(--ow-display);letter-spacing:.14em;color:#a1b0c5}.section-label > a{font-size:11px;color:#aebdd0}
+.fields-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.journal .field-link{background:#354257;border:1px solid #4b5970!important;display:flex;align-items:center;gap:14px;padding:20px 18px;min-height:97px;transition:background .15s,transform .15s;position:relative}
+.field-link:before{content:'';position:absolute;left:-1px;top:18px;bottom:18px;width:3px;background:#f99e1a;opacity:0}
+.field-link:hover:before{opacity:1}.journal .field-link:hover{background:#43536c;transform:translateY(-2px);color:#fff}
+.field-link > span{font:400 19px Koverwatch,sans-serif;color:#a1b0c5;align-self:flex-start}.field-link div{min-width:0}.field-link strong{display:block;font:400 25px Koverwatch,sans-serif;color:#e4ecf7;white-space:nowrap}.field-link small{display:block;margin-top:7px;font-size:10px;color:#b7c3d3}.field-link b{margin-left:auto;font-size:16px;font-weight:400;color:#f99e1a}
+.recent{margin-top:47px}.post-list{border-top:1px solid #4b5970}.journal .post-row{display:flex;align-items:center;gap:32px;padding:22px 0;border-bottom:1px solid #ffffff15!important}.post-row time{font:600 14px var(--ow-display);color:#a7b8cc;min-width:85px}.post-row div > span{font-size:10px;color:#f3b45f}.journal .post-row h3{font:500 17px/1.7 var(--ow-body);letter-spacing:-.025em;color:#e2eaf5;margin-top:4px}.post-row b{font-weight:400;color:#91a5bf;margin-left:auto}.post-row:hover h3{color:#ffc25a}
+.journal .journal-footer{display:flex;justify-content:space-between;align-items:center;margin:42px 0 0;padding:25px 0 32px;font:600 11px var(--ow-display);color:#a1b0c5;background:transparent;letter-spacing:.08em;border:0;min-height:0}.journal-footer div{display:flex;gap:25px}
+@media(max-width:850px){.journal-header{padding:0 30px}.journal-body{padding:0 30px}.fields-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-note{width:215px}.journal h1{font-size:64px}}
+@media(max-width:600px){.journal-header{height:74px;padding:0 22px}.journal .wordmark{font-size:27px}.journal-header nav{gap:17px}.journal-header nav a{font-size:21px}.journal-header nav a:last-child{display:none}.journal-header nav a.active:after{bottom:-24px}.journal-body{padding:0 24px}.journal-intro{display:block;padding:44px 0 35px}.journal h1{font-size:62px}.journal .intro-description{font-size:11px;margin-top:20px}.profile-note{width:auto;margin-top:30px;padding:0 0 0 16px}.profile-label{display:none}.profile-note strong{font-size:25px}.profile-note p{font-size:11px;margin:6px 0}.frontier{font-size:10px}.fields-grid{gap:10px}.journal .field-link{padding:16px 12px;gap:8px;min-height:95px}.field-link > span{display:none}.field-link strong{font-size:23px}.field-link small{font-size:9px;line-height:1.6}.field-link b{font-size:12px}.recent{margin-top:34px}.journal .post-row{gap:14px;padding:18px 0}.post-row time{min-width:58px;font-size:11px}.journal .post-row h3{font-size:13px}.journal .journal-footer{font-size:9px;margin-top:25px}.journal-footer div{gap:13px}}
+@media(prefers-reduced-motion:reduce){.journal *{transition:none!important}}
+
+/* Light menu palette; typography and layout retained. */
+body:has(.journal){background:#dce3ec}
+.journal{color:#29364b;background:radial-gradient(ellipse at 85% 0%,#f9fbff 0%,transparent 60%),linear-gradient(135deg,#e4eaf2,#d2dce9)}
+.journal-header{border-bottom-color:#9baabd66}
+.journal .wordmark{color:#28374c}.wordmark span{color:#e98712}
+.journal-header nav a{color:#485a73}.journal-header nav a.active{color:#a75600}.journal-header nav a.active:after{background:#f99e1a}
+.journal a:hover{color:#a75600}.journal a:focus-visible{outline-color:#a75600}
+.journal .eyebrow{color:#4b607a}.eyebrow span{color:#647891}
+.journal h1{color:#29364b}.journal h1 em{color:#d97900}
+.journal .intro-description{color:#4c6079}
+.profile-note{border-left-color:#f99e1a}.profile-label{color:#576d89}.profile-note strong{color:#29364b}.profile-note p{color:#4c6079}.frontier{color:#425873}
+.journal h2{color:#29364b}.section-label > span{color:#586e89}.section-label > a{color:#435b78}
+.journal .field-link{background:#f8faff;border-color:#c0ccdc!important;box-shadow:0 3px 8px #31486b08}
+.journal .field-link:hover{background:#fff;border-color:#f99e1a!important;color:#29364b}
+.field-link:before{background:#f99e1a}.field-link > span{color:#647c99}.field-link strong{color:#29364b}.field-link small{color:#536a86}.field-link b{color:#ac5900}
+.post-list{border-top-color:#aab9cd}.journal .post-row{border-bottom-color:#aab9cd70!important}.post-row time{color:#526b89}.post-row div > span{color:#a35400}.journal .post-row h3{color:#29364b}.post-row b{color:#526b89}.post-row:hover h3{color:#a35400}
+.journal .journal-footer{color:#526985}
