@@ -71,7 +71,7 @@ h1, h2, h3, h4 { font-family: var(--ow-body); letter-spacing: -.035em; }
 #sidebar ul li.nav-item a.nav-link { border-radius: 2px; letter-spacing: .035em; font-weight: 800; }
 #sidebar .nav-item.active .nav-link { background: var(--sidebar-hover-bg); box-shadow: inset 3px 0 var(--ow-orange); }
 /* Koverwatch: source https://blog.naver.com/skysmj/220729927533 */
-@font-face {font-family:Koverwatch;src:url('../fonts/koverwatch.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face {font-family:Koverwatch;src:url('../koverwatch.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 #sidebar .site-title,#sidebar .nav-link {font-family:Koverwatch,var(--ow-body);font-weight:400;font-style:normal}
 #sidebar .nav-link {font-size:1.35rem}
 body:has(.journal) {background:#252f40}
