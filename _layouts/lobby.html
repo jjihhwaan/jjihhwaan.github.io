@@ -1,0 +1,14 @@
+---
+layout: compress
+---
+<!doctype html>
+{% include origin-type.html %}
+{% include lang.html %}
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}" data-bs-theme="light">
+  {% include head.html lang=lang %}
+  <body>
+    <!-- The custom lobby contains navigation images, not article images.
+         Render it directly: Chirpy refactor-content would add nested links. -->
+    <main aria-label="Main Content"><article><div class="content">{{ content }}</div></article></main>
+  </body>
+</html>
