@@ -27,6 +27,16 @@ layout: compress
             {% else %}
               {{ content }}
             {% endif %}
+            {% if page.layout == 'post' %}
+            <nav class="reading-return" aria-label="글 목록 이동">
+              <a href="{{ '/archives/' | relative_url }}">← 전체 기록</a>
+              {% if page.categories.size > 0 %}
+              {% assign first_category = page.categories | first %}
+              {% assign category_slug = first_category | slugify %}
+              <a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ first_category }} 목록 →</a>
+              {% endif %}
+            </nav>
+            {% endif %}
           </main>
 
           <!-- panel -->
