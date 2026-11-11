@@ -4,7 +4,7 @@ title: 홈
 ---
 {% assign latest = site.posts | first %}
 <div class="game-lobby ui-lobby">
-  <img class="game-scene" src="{{ '/assets/img/hanamura.jpg' | relative_url }}" alt="" fetchpriority="high" aria-hidden="true">
+  <img class="game-scene" src="{{ '/assets/img/hanamura.webp' | relative_url }}" srcset="{{ '/assets/img/hanamura-mobile.webp' | relative_url }} 960w, {{ '/assets/img/hanamura.webp' | relative_url }} 1920w" sizes="100vw" width="1920" height="1100" alt="" fetchpriority="high" aria-hidden="true">
   <div class="game-shade" aria-hidden="true"></div>
   <header class="game-topbar">
     <nav class="game-navigation" aria-label="주 메뉴">
@@ -14,11 +14,11 @@ title: 홈
       <a href="{{ '/tags/knights-frontier/' | relative_url }}">활동</a>
     </nav>
     <a class="game-play" href="{{ latest.url | relative_url }}"><svg class="ow-symbol" viewBox="0 0 100 100" aria-hidden="true"><path d="M29 18 A38 38 0 0 1 71 18" fill="none" stroke="#f99e1a" stroke-width="11"/><path d="M20 25 A38 38 0 1 0 80 25" fill="none" stroke="currentColor" stroke-width="11"/><path d="M44 31 L44 57 L25 75 L33 82 L50 65 L67 82 L75 75 L56 57 L56 31 Z" fill="currentColor"/></svg><span class="mark-caption">최근 글 읽기</span></a>
-    <button class="game-player" type="button" data-open="profile-dialog" aria-haspopup="dialog" aria-label="jjihhwaan 사용자 정보 열기"><img src="https://github.com/jjihhwaan.png" alt="" width="42" height="42"><span><strong>JJIHHWAAN</strong><small>KNIGHTS FRONTIER · 3기</small></span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+    <button class="game-player" type="button" data-open="profile-dialog" aria-haspopup="dialog" aria-label="jjihhwaan 사용자 정보 열기"><img src="https://github.com/jjihhwaan.png?size=96" alt="" width="42" height="42"><span><strong>JJIHHWAAN</strong><small>KNIGHTS FRONTIER · 3기</small></span><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
   </header>
-  <nav class="lobby-tabs" aria-label="학습 카테고리"><a data-hero="genji" href="{{ '/categories/개발/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/genji.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-code" aria-hidden="true"></i><span>개발</span></a><a data-hero="sombra" href="{{ '/categories/ctf-wargame/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/sombra.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-flag" aria-hidden="true"></i><span>CTF/Wargame</span></a><a data-hero="cassidy" href="{{ '/categories/bug-bounty/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/cassidy.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-bug" aria-hidden="true"></i><span>Bug Bounty</span></a><a data-hero="kiriko" href="{{ '/categories/블로그-기술문서/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/kiriko.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-file-lines" aria-hidden="true"></i><span>블로그/기술문서</span></a><a data-hero="mercy" href="{{ '/categories/논문-컨퍼런스/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/mercy.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-book-open" aria-hidden="true"></i><span>논문/컨퍼런스</span></a><a data-hero="tracer" href="{{ '/categories/공모전-자격증/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/tracer.png' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-award" aria-hidden="true"></i><span>공모전/자격증</span></a></nav>
+  <nav class="lobby-tabs" aria-label="학습 카테고리"><a data-hero="genji" href="{{ '/categories/개발/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/genji.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-code" aria-hidden="true"></i><span>개발</span></a><a data-hero="sombra" href="{{ '/categories/ctf-wargame/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/sombra.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-flag" aria-hidden="true"></i><span>CTF/Wargame</span></a><a data-hero="cassidy" href="{{ '/categories/bug-bounty/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/cassidy.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-bug" aria-hidden="true"></i><span>Bug Bounty</span></a><a data-hero="kiriko" href="{{ '/categories/블로그-기술문서/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/kiriko.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-file-lines" aria-hidden="true"></i><span>블로그/기술문서</span></a><a data-hero="mercy" href="{{ '/categories/논문-컨퍼런스/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/mercy.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-book-open" aria-hidden="true"></i><span>논문/컨퍼런스</span></a><a data-hero="tracer" href="{{ '/categories/공모전-자격증/' | relative_url }}"><img class="tab-portrait" src="{{ '/assets/img/heroes/tracer.webp' | relative_url }}" alt="" aria-hidden="true" width="160" height="160"><i class="fas fa-award" aria-hidden="true"></i><span>공모전/자격증</span></a></nav>
   <div class="game-stage" aria-label="블로그 로비">
-    <div class="game-hero" aria-hidden="true"><img src="{{ '/assets/img/kiriko-antifragile.png' | relative_url }}" alt="" width="1024" height="1536"></div>
+    <div class="game-hero" aria-hidden="true"><img src="{{ '/assets/img/kiriko-antifragile.webp' | relative_url }}" srcset="{{ '/assets/img/kiriko-antifragile-mobile.webp' | relative_url }} 480w, {{ '/assets/img/kiriko-antifragile.webp' | relative_url }} 800w" sizes="(max-width: 800px) 240px, 32vw" decoding="async" alt="" width="1024" height="1536"></div>
     <div class="game-petals" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
     <section class="game-recent" aria-labelledby="recent-heading">
       <div class="lobby-section-label">ARCHIVE / LATEST</div><h2 id="recent-heading" class="lobby-heading">최근 기록</h2>
@@ -40,7 +40,7 @@ title: 홈
   <footer class="game-bottom"><div class="game-social"><a href="https://github.com/jjihhwaan"><i class="fab fa-github" aria-hidden="true"></i> GITHUB</a><a href="https://www.instagram.com/jjihhwaan_/"><i class="fab fa-instagram" aria-hidden="true"></i> INSTAGRAM</a></div><button type="button" class="motion-toggle" aria-pressed="false">배경 움직임 끄기</button><span class="game-credit">개인 기술 블로그 · 배경·캐릭터 © Blizzard Entertainment</span><button type="button" data-open="search-dialog" aria-haspopup="dialog"><kbd>/</kbd> 글 검색 <i class="fas fa-magnifying-glass" aria-hidden="true"></i></button></footer>
   <dialog class="game-dialog profile-dialog" id="profile-dialog" aria-labelledby="profile-heading">
     <div class="dialog-heading"><span>PLAYER PROFILE</span><button class="dialog-close" type="button" data-close aria-label="사용자 정보 닫기">×</button></div>
-    <div class="profile-identity"><img src="https://github.com/jjihhwaan.png" width="76" height="76" alt="jjihhwaan 프로필 사진"><div><span>JJIHHWAAN</span><h2 id="profile-heading">정지환</h2></div></div>
+    <div class="profile-identity"><img src="https://github.com/jjihhwaan.png?size=96" width="76" height="76" alt="jjihhwaan 프로필 사진"><div><span>JJIHHWAAN</span><h2 id="profile-heading">정지환</h2></div></div>
     <dl class="profile-facts"><div><dt>소속</dt><dd>고려대학교 세종캠퍼스<br>인공지능사이버보안학과 재학</dd></div><div><dt>활동</dt><dd>Knights Frontier 3기</dd></div><div><dt>기록</dt><dd>보안·개발 학습과 문제 풀이</dd></div></dl>
     <a class="dialog-primary" href="{{ '/about/' | relative_url }}">소개 전체 보기 <span aria-hidden="true">↗</span></a><div class="profile-links"><a href="https://github.com/jjihhwaan">GitHub ↗</a><a href="https://www.instagram.com/jjihhwaan_/">Instagram ↗</a></div>
     <p class="dialog-hint"><kbd>ESC</kbd> 닫기</p>
@@ -84,11 +84,11 @@ title: 홈
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
  const fine=window.matchMedia('(hover: hover) and (pointer: fine)');
  const motionButton=root.querySelector('.motion-toggle');
- let paused=reduced.matches,frame=0;
+ let paused=reduced.matches||!fine.matches,frame=0;
  const reset=()=>{root.style.setProperty('--look-x','0px');root.style.setProperty('--look-y','0px')};
  const sync=()=>{root.classList.toggle('motion-off',paused);motionButton.setAttribute('aria-pressed',String(paused));motionButton.textContent=paused?'배경 움직임 켜기':'배경 움직임 끄기';reset()};
  motionButton.addEventListener('click',()=>{paused=!paused;sync()});
- reduced.addEventListener('change',()=>{paused=reduced.matches;sync()});
+ reduced.addEventListener('change',()=>{paused=reduced.matches||!fine.matches;sync()});
  root.addEventListener('pointermove',e=>{
   if(paused||!fine.matches||dialogs.some(d=>d.open))return;
   cancelAnimationFrame(frame);

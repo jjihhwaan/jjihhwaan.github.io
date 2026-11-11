@@ -114,7 +114,9 @@
 
   <!-- This site uses a fixed light reading palette; do not restore a stored dark theme. -->
 
-  {% include js-selector.html lang=lang %}
+  {% unless page.layout == 'lobby' %}
+    {% include js-selector.html lang=lang %}
+  {% endunless %}
 
   {% if jekyll.environment == 'production' %}
     <!-- PWA -->
