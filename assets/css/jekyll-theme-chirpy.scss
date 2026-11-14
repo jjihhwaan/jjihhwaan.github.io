@@ -1269,3 +1269,15 @@ body{font-family:var(--ow-body)}
     font-size: 20px;
   }
 }
+
+/* 홈 중앙 로고 패널 복원 */
+.clean-lobby .game-play {
+  background: linear-gradient(135deg, #3d495f, #293448);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  box-shadow: inset 0 -3px #f99e1a;
+  border: 0;
+}
+
+.clean-lobby .game-play:hover {
+  background: linear-gradient(135deg, #4a5870, #344158);
+}
