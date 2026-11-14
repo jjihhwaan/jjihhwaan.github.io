@@ -1182,3 +1182,90 @@ body{font-family:var(--ow-body)}
 .clean-lobby .game-petals i{animation-duration:calc(19s + var(--n)*1.2s)}
 @media(max-width:800px) and (prefers-reduced-motion:no-preference){.clean-lobby .game-petals{display:block}.clean-lobby .game-petals i:nth-child(n+5){display:none}}
 @media(prefers-reduced-motion:reduce){.clean-lobby .game-petals{display:none}}
+
+/* 게시글 가독성 */
+.archive-shell article > header,
+.archive-shell article > .content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 글 제목 */
+.archive-shell article > h1,
+.archive-shell article > header h1 {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif !important;
+  font-size: clamp(28px, 4vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+}
+
+/* 본문 */
+.archive-shell article > .content {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #303846;
+  letter-spacing: -0.015em;
+}
+
+.archive-shell article > .content p {
+  margin-bottom: 1.4em;
+}
+
+/* 큰 소제목 */
+.archive-shell article > .content h2 {
+  margin-top: 2.6em;
+  margin-bottom: 1em;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #19283c;
+  border: 0;
+}
+
+/* 작은 소제목 */
+.archive-shell article > .content h3 {
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  font-size: 21px;
+  line-height: 1.55;
+  color: #293b52;
+}
+
+/* 핵심 문장 */
+.archive-shell article > .content strong {
+  font-weight: 700;
+  color: #17283e;
+}
+
+/* 인용·요약 */
+.archive-shell article > .content blockquote {
+  margin: 1.6em 0;
+  padding: 16px 20px;
+  background: #e8eef5;
+  border-left: 3px solid #758ba5;
+  border-radius: 4px;
+  color: #34465d;
+}
+
+.archive-shell article > .content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 모바일 */
+@media (max-width: 700px) {
+  .archive-shell article > .content {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .archive-shell article > .content h2 {
+    font-size: 23px;
+  }
+
+  .archive-shell article > .content h3 {
+    font-size: 20px;
+  }
+}
