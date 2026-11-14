@@ -5191,3 +5191,10 @@ body{font-family:var(--ow-body)}
 .about-panel .about-chips li{font:400 20px/1.4 Koverwatch,var(--ow-body)}
 .game-lobby .about-panel .about-contact a{font:400 21px/1.4 Koverwatch,var(--ow-body);min-height:44px}
 @media(max-width:700px){.clean-lobby #game-title{font-size:54px}.clean-lobby .lobby-name{font-size:24px}.clean-lobby .lobby-school{font-size:20px}.game-lobby .about-panel h2{font-size:46px}.about-panel .about-facts dd{font-size:21px}}
+
+/* 홈의 Knights Frontier 3기 */
+.clean-lobby .lobby-cohort {
+  font: 400 20px/1.5 Koverwatch, sans-serif;
+  letter-spacing: 0.04em;
+  color: #dce5ef;
+}
