@@ -1,9 +1,8 @@
-
 ---
 title: "비밀번호 관리자도 피싱 공격의 대상이 될 수 있을까? | USENIX Security 2025 논문 리뷰"
 date: 2026-11-14 16:00:00 +0900
-categories: [논문/컨퍼런스]
-tags: [knights-frontier, mission, paper-review, phishing, password-manager, usenix-security]
+categories: [논문, 컨퍼런스]
+tags: [knights-frontier, mission, paper-review, phishing, password-manager]
 ---
 
 ## 1. 논문 소개
