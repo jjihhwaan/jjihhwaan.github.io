@@ -1,6 +1,9 @@
 ---
 layout: page
 ---
-<p class="reader-list-intro">{{ page.title | escape }} 분야의 글 모음</p>
-{% assign category_posts = site.categories[page.category] %}
-{% include reader-list.html posts=category_posts %}
+
+<p class="reader-list-intro">
+  {{ page.title | escape }} 분야의 글 모음
+</p>
+
+{% include reader-list.html posts=page.posts %}
