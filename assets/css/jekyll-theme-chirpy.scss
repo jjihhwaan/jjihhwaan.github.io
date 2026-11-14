@@ -20876,3 +20876,13 @@ body{font-family:var(--ow-body)}
 .archive-topbar .archive-profile{gap:12px}
 .game-lobby .game-dialog :is(a,button,input):focus-visible{outline:3px solid #ffc46b;outline-offset:3px}
 @media(max-width:700px){.game-lobby :is(.fields-dialog,.search-dialog){padding:20px}.game-lobby .game-category{padding:17px 15px}.game-lobby .game-player{padding:5px;min-width:44px;min-height:44px}.game-lobby .game-player img{width:34px;height:34px}}
+
+/* 상단 플레이어 버튼 음영 복원 */
+.game-lobby .game-player {
+  background: linear-gradient(135deg, #3b475c, #293449);
+  box-shadow: 0 3px 10px #10182740;
+}
+
+.game-lobby .game-player:hover {
+  background: linear-gradient(135deg, #4a5870, #344158);
+}
