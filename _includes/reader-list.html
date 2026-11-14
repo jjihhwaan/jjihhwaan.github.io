@@ -1,0 +1,11 @@
+{% assign entry_count = 0 %}
+<div class="reader-list">
+{% for post in include.posts %}
+  {% assign entry_body = post.content | strip_html | strip %}
+  {% if post.recommend == false or entry_body == '' or entry_body contains '아직 작성한 기록 없음' %}{% continue %}{% endif %}
+  {% if include.limit and entry_count >= include.limit %}{% break %}{% endif %}
+  {% include reader-card.html post=post %}
+  {% assign entry_count = entry_count | plus: 1 %}
+{% endfor %}
+</div>
+{% if entry_count == 0 %}<div class="reader-empty"><h3>아직 공개한 글이 없어.</h3><p>다른 분야의 글은 전체 글 목록에서 읽을 수 있어.</p><a href="{{ '/archives/' | relative_url }}">전체 글 보기 →</a></div>{% endif %}

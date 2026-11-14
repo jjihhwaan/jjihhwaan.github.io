@@ -1,0 +1,15 @@
+{% assign entry = include.post %}
+{% capture entry_summary %}{% case entry.url %}
+{% when '/posts/password-manager-phishing-review/' %}비밀번호 관리자 화면을 모방한 피싱 공격과 사용자 실험 결과를 정리한 USENIX Security 2025 논문 리뷰.
+{% when '/posts/knights-frontier-mission-2/' %}성장과 경제적 안정에 대한 생각, Knights Frontier 활동을 통해 앞으로 7개월 동안 이루고 싶은 목표.
+{% when '/posts/blog-start/' %}Chirpy로 시작한 GitHub Pages 블로그. 기본 설정부터 배포와 디자인 수정까지 직접 겪은 과정.
+{% else %}{{ entry.description | default: entry.excerpt | strip_html | normalize_whitespace | truncate: 150 }}
+{% endcase %}{% endcapture %}
+<article class="reader-entry">
+  <a class="reader-entry-link" href="{{ entry.url | relative_url }}">
+    <div class="reader-entry-meta"><span>{{ entry.categories | first | escape }}</span><time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{{ entry.date | date: '%Y.%m.%d' }}</time></div>
+    <h3>{{ entry.title | escape }}</h3>
+    <p>{{ entry_summary | strip | escape }}</p>
+    <span class="reader-entry-action">글 읽기 <span aria-hidden="true">→</span></span>
+  </a>
+</article>
