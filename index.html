@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 layout: lobby
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ title: 홈
 
 
 
+
+
+
+
 ---
+
+
+
+
 
 
 
@@ -18,7 +34,15 @@ title: 홈
 
 
 
+
+
+
+
 <div class="game-lobby ui-lobby clean-lobby">
+
+
+
+
 
 
 
@@ -26,7 +50,15 @@ title: 홈
 
 
 
+
+
+
+
   <div class="game-shade" aria-hidden="true"></div>
+
+
+
+
 
 
 
@@ -34,7 +66,15 @@ title: 홈
 
 
 
+
+
+
+
     <nav class="game-navigation" aria-label="주 메뉴">
+
+
+
+
 
 
 
@@ -42,7 +82,15 @@ title: 홈
 
 
 
+
+
+
+
       <button type="button" data-open="fields-dialog" aria-haspopup="dialog">학습 분야</button>
+
+
+
+
 
 
 
@@ -50,7 +98,15 @@ title: 홈
 
 
 
+
+
+
+
       <a href="{{ '/tags/knights-frontier/' | relative_url }}">활동</a>
+
+
+
+
 
 
 
@@ -58,7 +114,15 @@ title: 홈
 
 
 
+
+
+
+
     <a class="game-play" href="{{ latest.url | relative_url }}"><svg class="ow-symbol" viewBox="0 0 100 100" aria-hidden="true"><path d="M29 18 A38 38 0 0 1 71 18" fill="none" stroke="#f99e1a" stroke-width="11"/><path d="M20 25 A38 38 0 1 0 80 25" fill="none" stroke="currentColor" stroke-width="11"/><path d="M44 31 L44 57 L25 75 L33 82 L50 65 L67 82 L75 75 L56 57 L56 31 Z" fill="currentColor"/></svg><span class="mark-caption">최근 글 읽기</span></a>
+
+
+
+
 
 
 
@@ -66,7 +130,15 @@ title: 홈
 
 
 
+
+
+
+
   </header>
+
+
+
+
 
 
 
@@ -74,9 +146,27 @@ title: 홈
 
 
 
+
+
+
+
   <div class="game-stage" aria-label="블로그 로비">
 
+
+
 <div class="game-petals" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i><i style="--n:6"></i><i style="--n:7"></i><i style="--n:8"></i></div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ title: 홈
 
 
 
+
+
+
+
       <div class="lobby-section-label">ARCHIVE / LATEST</div><h2 id="recent-heading" class="lobby-heading">최근 기록</h2>
+
+
+
+
 
 
 
@@ -100,7 +198,15 @@ title: 홈
 
 
 
+
+
+
+
       <a class="game-view-all" href="{{ '/archives/' | relative_url }}">전체 기록 보기 <span aria-hidden="true">→</span></a>
+
+
+
+
 
 
 
@@ -108,7 +214,15 @@ title: 홈
 
 
 
+
+
+
+
     <section class="game-intro" aria-labelledby="game-title">
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ title: 홈
 
 
 
+
+
+
+
       <p class="lobby-name">보안과 개발 학습 기록</p>
+
+
+
+
 
 
 
@@ -124,7 +246,15 @@ title: 홈
 
 
 
+
+
+
+
       <div class="lobby-actions">
+
+
+
+
 
 
 
@@ -132,7 +262,15 @@ title: 홈
 
 
 
+
+
+
+
         <button type="button" data-open="fields-dialog" aria-haspopup="dialog"><span class="action-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span><span><strong>학습 분야</strong><small>6개 분야별 학습 노트</small></span><b>＋</b></button>
+
+
+
+
 
 
 
@@ -140,7 +278,15 @@ title: 홈
 
 
 
+
+
+
+
         <button class="lobby-profile-action" type="button" data-open="profile-dialog" aria-haspopup="dialog"><span class="action-icon"><i class="fas fa-user" aria-hidden="true"></i></span><span><strong>전체 프로필</strong><small>소개와 연락처</small></span><b>＋</b></button>
+
+
+
+
 
 
 
@@ -148,11 +294,23 @@ title: 홈
 
 
 
+
+
+
+
     </section>
 
 
 
+
+
+
+
   </div>
+
+
+
+
 
 
 
@@ -160,25 +318,51 @@ title: 홈
 
 
 
+
+
+
+
   <dialog class="game-dialog profile-dialog about-panel" id="profile-dialog" aria-labelledby="profile-heading">
+
   <div class="about-topline"><span>About.</span><button class="dialog-close" type="button" data-close aria-label="소개 닫기">×</button></div>
+
   <div class="about-grid">
+
     <div class="about-copy">
+
       <p class="about-label">NAME</p>
+
       <h2 id="profile-heading">정지환 <span>jjihhwaan</span></h2>
+
       <dl class="about-facts">
+
         <div><dt>SCHOOL</dt><dd>고려대학교 세종캠퍼스</dd></div>
+
         <div><dt>MAJOR</dt><dd>인공지능사이버보안학과 재학</dd></div>
+
         <div><dt>ACTIVITY</dt><dd>Knights Frontier 3기</dd></div>
+
         <div><dt>NOTE</dt><dd>공부한 내용과 문제 풀이, 직접 만들어 본 것들의 기록.</dd></div>
+
       </dl>
+
       <section class="about-section" aria-labelledby="about-learning"><h3 id="about-learning">학습 분야</h3><ul class="about-chips"><li>보안</li><li>개발</li></ul></section>
-      <section class="about-section" aria-labelledby="about-contact"><h3 id="about-contact">Contact</h3><div class="about-contact"><a href="https://github.com/jjihhwaan"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a><a href="https://www.instagram.com/jjihhwaan_/"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></div></section>
+
+      <section class="about-section" aria-labelledby="about-contact"><h3 id="about-contact">Contact</h3><div class="about-contact"><a href="https://github.com/jjihhwaan"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a><a href="https://www.instagram.com/jjihhwaan_/"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a><a href="mailto:{{ site.social.email | escape }}" aria-label="이메일 보내기"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></div></section>
+
     </div>
+
     <figure class="about-portrait"><img src="https://github.com/jjihhwaan.png?size=512" width="280" height="280" loading="lazy" decoding="async" alt="jjihhwaan 프로필 이미지"><figcaption>JJIHHWAAN / STUDY NOTES</figcaption></figure>
+
   </div>
+
   <div class="about-footer"><a href="{{ '/about/' | relative_url }}">소개 페이지 →</a><span>ESC · 닫기</span></div>
+
 </dialog>
+
+
+
+
 
 
 
@@ -186,11 +370,23 @@ title: 홈
 
 
 
+
+
+
+
     <div class="dialog-heading"><span>SELECT CATEGORY</span><button class="dialog-close" type="button" data-close aria-label="학습 분야 닫기">×</button></div><h2 id="fields-heading">학습 분야</h2><p class="dialog-description">분야별 학습 기록과 활동</p><div class="game-category-grid"><a class="game-category" href="{{ '/categories/개발/' | relative_url }}"><i class="fas fa-code" aria-hidden="true"></i><span><strong>개발</strong><small>코드 구현과 문제 해결</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/ctf-wargame/' | relative_url }}"><i class="fas fa-flag" aria-hidden="true"></i><span><strong>CTF/Wargame</strong><small>문제 분석과 풀이 기록</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/bug-bounty/' | relative_url }}"><i class="fas fa-bug" aria-hidden="true"></i><span><strong>Bug Bounty</strong><small>웹 취약점 학습 기록</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/블로그-기술문서/' | relative_url }}"><i class="fas fa-file-lines" aria-hidden="true"></i><span><strong>블로그/기술문서</strong><small>읽은 자료와 학습 노트</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/논문-컨퍼런스/' | relative_url }}"><i class="fas fa-book-open" aria-hidden="true"></i><span><strong>논문/컨퍼런스</strong><small>논문과 발표 내용 정리</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/공모전-자격증/' | relative_url }}"><i class="fas fa-award" aria-hidden="true"></i><span><strong>공모전/자격증</strong><small>준비 과정과 활동 기록</small></span><b aria-hidden="true">↗</b></a></div><div class="dialog-footer"><a href="{{ '/categories/' | relative_url }}">카테고리 전체 보기 ↗</a><span><kbd>ESC</kbd> 닫기</span></div>
 
 
 
+
+
+
+
   </dialog>
+
+
+
+
 
 
 
@@ -198,7 +394,15 @@ title: 홈
 
 
 
+
+
+
+
     <div class="dialog-heading"><span>SEARCH ARCHIVE</span><button class="dialog-close" type="button" data-close aria-label="글 검색 닫기">×</button></div><h2 id="search-heading">글 검색</h2><label class="game-search-label" for="game-search">제목 또는 카테고리</label><input id="game-search" type="search" placeholder="예: GitHub, CTF, Knights Frontier" autocomplete="off"><p class="search-count" id="search-count" role="status"></p><ul class="game-results">{% for post in site.posts %}<li data-search="{{ post.title | escape }} {{ post.categories | join: ' ' | escape }} {{ post.tags | join: ' ' | escape }}"><a href="{{ post.url | relative_url }}"><span>{{ post.categories | first | escape }}</span><strong>{{ post.title | escape }}</strong><small>{{ post.date | date: '%Y.%m.%d' }}</small></a></li>{% endfor %}</ul><p id="search-empty" hidden>일치하는 글이 없어. 다른 검색어로 찾아봐.</p>
+
+
+
+
 
 
 
@@ -206,7 +410,15 @@ title: 홈
 
 
 
+
+
+
+
   <noscript><div class="game-noscript"><a href="{{ '/categories/' | relative_url }}">학습 분야</a><a href="{{ '/about/' | relative_url }}">사용자 소개</a><a href="{{ '/archives/' | relative_url }}">전체 글 목록</a></div></noscript>
+
+
+
+
 
 
 
@@ -214,7 +426,15 @@ title: 홈
 
 
 
+
+
+
+
 <script data-game-lobby>
+
+
+
+
 
 
 
@@ -222,7 +442,15 @@ title: 홈
 
 
 
+
+
+
+
  const root=document.querySelector('.game-lobby');
+
+
+
+
 
 
 
@@ -230,7 +458,15 @@ title: 홈
 
 
 
+
+
+
+
  root.dataset.ready='true';
+
+
+
+
 
 
 
@@ -238,7 +474,15 @@ title: 홈
 
 
 
+
+
+
+
  const dialogs=[...root.querySelectorAll('dialog')];
+
+
+
+
 
 
 
@@ -246,7 +490,15 @@ title: 홈
 
 
 
+
+
+
+
  const results=[...root.querySelectorAll('.game-results li')];
+
+
+
+
 
 
 
@@ -254,7 +506,15 @@ title: 홈
 
 
 
+
+
+
+
   const q=search.value.trim().toLocaleLowerCase().replace(/\s+/g,'');let count=0;
+
+
+
+
 
 
 
@@ -262,7 +522,15 @@ title: 홈
 
 
 
+
+
+
+
   root.querySelector('#search-count').textContent=`${count}개의 기록`;
+
+
+
+
 
 
 
@@ -270,7 +538,15 @@ title: 홈
 
 
 
+
+
+
+
  };
+
+
+
+
 
 
 
@@ -278,7 +554,15 @@ title: 홈
 
 
 
+
+
+
+
  root.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>open(button.dataset.open,button)));
+
+
+
+
 
 
 
@@ -286,7 +570,15 @@ title: 홈
 
 
 
+
+
+
+
   dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
+
+
+
+
 
 
 
@@ -294,7 +586,15 @@ title: 홈
 
 
 
+
+
+
+
   const outside=e=>{const r=dialog.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};
+
+
+
+
 
 
 
@@ -302,7 +602,15 @@ title: 홈
 
 
 
+
+
+
+
   dialog.addEventListener('click',e=>{if(backdropDown&&e.target===dialog&&outside(e))dialog.close();backdropDown=false});
+
+
+
+
 
 
 
@@ -310,7 +618,15 @@ title: 홈
 
 
 
+
+
+
+
  });
+
+
+
+
 
 
 
@@ -318,7 +634,15 @@ title: 홈
 
 
 
+
+
+
+
  document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!dialogs.some(d=>d.open)&&!event.target.closest('input,textarea,[contenteditable=true]')){event.preventDefault();open('search-dialog',document.activeElement)}});
+
+
+
+
 
 
 
@@ -326,11 +650,23 @@ title: 홈
 
 
 
+
+
+
+
 })();
 
 
 
+
+
+
+
 </script>
+
+
+
+
 
 
 
