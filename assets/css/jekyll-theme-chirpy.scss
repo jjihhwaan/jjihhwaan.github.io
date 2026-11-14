@@ -20891,3 +20891,10 @@ body{font-family:var(--ow-body)}
 .archive-shell main {
   border-top: 0;
 }
+
+/* 홈 최근 기록 날짜 */
+.clean-lobby .game-post-meta time {
+  font-size: 16px;
+  font-weight: 400;
+  color: #dce5ef;
+}
