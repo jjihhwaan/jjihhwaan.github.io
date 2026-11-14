@@ -20886,3 +20886,8 @@ body{font-family:var(--ow-body)}
 .game-lobby .game-player:hover {
   background: linear-gradient(135deg, #4a5870, #344158);
 }
+
+/* 내부 페이지 본문 상단의 주황색 선 제거 */
+.archive-shell main {
+  border-top: 0;
+}
