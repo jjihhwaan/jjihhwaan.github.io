@@ -1,0 +1,33 @@
+{% assign reading_count = 0 %}
+{% assign reading_seen = '|' %}
+{% capture reading_cards %}
+{% for pass in (1..2) %}
+  {% for post in site.posts %}
+    {% assign plain_body = post.content | strip_html | strip %}
+    {% if post.url == page.url or post.recommend == false or plain_body == '' or plain_body contains '아직 작성한 기록 없음' %}{% continue %}{% endif %}
+    {% assign post_key = post.url | prepend: '|' | append: '|' %}
+    {% if reading_seen contains post_key %}{% continue %}{% endif %}
+    {% assign is_related = false %}
+    {% for category in post.categories %}{% if page.categories contains category %}{% assign is_related = true %}{% endif %}{% endfor %}
+    {% for tag in post.tags %}{% if page.tags contains tag %}{% assign is_related = true %}{% endif %}{% endfor %}
+    {% if pass == 1 and is_related == false %}{% continue %}{% endif %}
+    {% if reading_count >= 3 %}{% break %}{% endif %}
+    <article class="reading-card">
+      <a href="{{ post.url | relative_url }}">
+        <div class="reading-card-meta"><span>{{ post.categories | first | escape }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
+        <h4>{{ post.title | escape }}</h4>
+        <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 110 | escape }}</p>
+        <span class="reading-card-arrow" aria-hidden="true">↗</span>
+      </a>
+    </article>
+    {% assign reading_count = reading_count | plus: 1 %}
+    {% assign reading_seen = reading_seen | append: post_key %}
+  {% endfor %}
+{% endfor %}
+{% endcapture %}
+{% if reading_count > 0 %}
+<aside id="related-posts" class="reading-related" aria-labelledby="related-label">
+  <h3 id="related-label">이어서 읽기</h3>
+  <nav class="reading-card-grid" aria-label="추천 글">{{ reading_cards }}</nav>
+</aside>
+{% endif %}

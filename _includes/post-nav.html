@@ -1,0 +1,15 @@
+{% assign older_post = nil %}
+{% assign newer_post = nil %}
+{% assign passed_current = false %}
+{% for candidate in site.posts %}
+  {% if candidate.url == page.url %}{% assign passed_current = true %}{% continue %}{% endif %}
+  {% assign plain_body = candidate.content | strip_html | strip %}
+  {% if candidate.recommend == false or plain_body == '' or plain_body contains '아직 작성한 기록 없음' %}{% continue %}{% endif %}
+  {% if passed_current %}{% assign older_post = candidate %}{% break %}{% else %}{% assign newer_post = candidate %}{% endif %}
+{% endfor %}
+{% if older_post or newer_post %}
+<nav class="reading-pagination" aria-label="이전 글과 다음 글">
+  {% if older_post %}<a href="{{ older_post.url | relative_url }}"><span>← 이전 글</span><strong>{{ older_post.title | escape }}</strong></a>{% endif %}
+  {% if newer_post %}<a class="reading-next" href="{{ newer_post.url | relative_url }}"><span>다음 글 →</span><strong>{{ newer_post.title | escape }}</strong></a>{% endif %}
+</nav>
+{% endif %}
