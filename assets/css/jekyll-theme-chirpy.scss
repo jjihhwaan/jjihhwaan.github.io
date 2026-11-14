@@ -20906,3 +20906,8 @@ body{font-family:var(--ow-body)}
   border-radius: 0;
   box-shadow: none;
 }
+
+/* 상단 메뉴 hover 글자색 통일 */
+.clean-lobby .game-navigation :is(a, button):not(.game-home):hover {
+  color: #ffc46b !important;
+}
