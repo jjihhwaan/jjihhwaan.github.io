@@ -20898,3 +20898,11 @@ body{font-family:var(--ow-body)}
   font-weight: 400;
   color: #dce5ef;
 }
+
+/* 포커스 테두리를 메뉴 버튼 안쪽에 맞춤 */
+.clean-lobby .game-navigation :is(a, button):focus {
+  outline: 2px solid #ffc46b;
+  outline-offset: -2px;
+  border-radius: 0;
+  box-shadow: none;
+}
