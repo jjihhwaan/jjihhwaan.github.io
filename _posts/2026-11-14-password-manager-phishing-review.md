@@ -362,6 +362,7 @@ Bitwarden에서는 로그인 창이 표시되는 방식에 따라 공격 성공�
 
 따라서 보안 지식이 피싱 공격을 예방하는 데 도움이 되지 않는다고 결론 내릴 수는 없다.
 
+---
 
 <div style="border-left: 4px solid #4b83c5; background: transparent; padding: 8px 0 8px 16px; margin: 36px 0 20px;">
   <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
