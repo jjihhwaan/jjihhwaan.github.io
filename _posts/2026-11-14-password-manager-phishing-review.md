@@ -193,8 +193,6 @@ LostPass는 가짜 세션 만료 알림으로 사용자를 유도하고, 정상�
 ---
 
 
----
-
 
 <div style="border-left: 4px solid #4b83c5; background: transparent; padding: 8px 0 8px 16px; margin: 36px 0 20px;">
   <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
