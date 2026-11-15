@@ -4863,3 +4863,10 @@ body.archive-shell.browse-shell .browse-heading > span {
   letter-spacing: .12em;
   color: #aebfd6;
 }
+
+
+/* Disable persistent image shimmer animation */
+.img-link.shimmer::before {
+  display: none !important;
+  animation: none !important;
+}
