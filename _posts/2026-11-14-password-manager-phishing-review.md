@@ -151,7 +151,12 @@ LostPass는 가짜 세션 만료 알림으로 사용자를 유도하고, 정상�
 
 첫 번째 연구 질문은 가짜 비밀번호 관리자 화면을 구현하는 것에서 나아가, **실제 사용자들이 마스터 비밀번호를 입력하는지** 확인하는 것이었다.
 
-#### 4.1.1 전체 실험 결과
+
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.1.1 전체 실험 결과
+  </h4>
+</div>
 
 | 구분 | 인원 |
 |---|---:|
@@ -234,7 +239,11 @@ LastPass 사용자 중 **31명(54.39%)은 가짜 대학 통합 로그인 페이�
 
 연구진은 1Password의 프로필 사진, Bitwarden의 로그인 창 표시 방식, 사용자가 인식한 화면 차이를 중심으로 분석했다.
 
-#### 4.2.1 1Password — 프로필 사진이 달라도 속을까?
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.2.1 1Password — 프로필 사진이 달라도 속을까?
+  </h4>
+</div>
 
 1Password의 정상적인 로그인 화면에는 사용자의 프로필 사진이 표시된다.
 
@@ -263,7 +272,11 @@ LastPass 사용자 중 **31명(54.39%)은 가짜 대학 통합 로그인 페이�
 
 ---
 
-#### 4.2.2 Bitwarden — 로그인 창의 위치가 달라도 속을까?
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.2.2 Bitwarden — 로그인 창의 위치가 달라도 속을까?
+  </h4>
+</div>
 
 Bitwarden에서는 로그인 창이 표시되는 방식에 따라 공격 성공률이 달라지는지 비교했다.
 
@@ -286,7 +299,11 @@ Bitwarden에서는 로그인 창이 표시되는 방식에 따라 공격 성공�
 
 ---
 
-#### 4.2.3 화면의 차이를 알아차린 사용자
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.2.3 화면의 차이를 알아차린 사용자
+  </h4>
+</div>
 
 연구진은 사후 설문을 통해 사용자가 비밀번호 관리자 화면에서 평소와 다른 점을 발견했는지 조사했다.
 
@@ -310,7 +327,11 @@ Bitwarden에서는 로그인 창이 표시되는 방식에 따라 공격 성공�
 
 세 번째 연구 질문은 사용자의 전공 및 업무 분야, 연령, 브라우저 환경 등에 따라 공격 성공률이 달라지는지 분석하는 것이었다.
 
-#### 4.3.1 기술적 배경에 따른 차이
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.3.1 기술적 배경에 따른 차이
+  </h4>
+</div>
 
 연구진은 참가자들의 전공과 업무 분야를 네 집단으로 나누어 비교했다.
 
@@ -329,7 +350,11 @@ Bitwarden에서는 로그인 창이 표시되는 방식에 따라 공격 성공�
 
 따라서 보안 지식이 피싱 공격을 예방하는 데 도움이 되지 않는다고 결론 내릴 수는 없다.
 
-#### 4.3.2 연령 및 사용 환경에 따른 차이
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.3.2 연령 및 사용 환경에 따른 차이
+  </h4>
+</div>
 
 연구진은 연령대, 브라우저 언어, 웹 브라우저 및 운영체제에 따른 차이도 분석했다.
 
