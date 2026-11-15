@@ -1,0 +1,15 @@
+---
+layout: page
+---
+<p class="reader-list-intro">분야별로 모아 보는 글</p>
+<div class="category-directory">
+{% assign sorted_categories = site.categories | sort %}
+{% for group in sorted_categories %}
+{% assign public_count = 0 %}
+{% for post in group[1] %}
+{% assign body_text = post.content | strip_html | strip %}
+{% unless body_text == '' or body_text contains '아직 작성한 기록 없음' or post.recommend == false %}{% assign public_count = public_count | plus: 1 %}{% endunless %}
+{% endfor %}
+<a href="{{ '/categories/' | relative_url }}{{ group[0] | slugify | url_encode }}/"><h2>{{ group[0] | escape }}</h2><span>{% if public_count > 0 %}{{ public_count }}개의 글{% else %}작성 예정{% endif %}</span><b aria-hidden="true">→</b></a>
+{% endfor %}
+</div>

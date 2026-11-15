@@ -1098,37 +1098,99 @@ body{font-family:var(--ow-body)}
 
 }
 
-
 /* Reader-first home and reusable article listings. */
+
 .reader-home .game-stage{display:grid;grid-template-columns:minmax(235px,.7fr) minmax(0,1.65fr);gap:clamp(32px,5vw,96px);max-width:1400px;width:100%;margin:auto;padding:44px 4vw 60px!important;align-items:start;min-height:0}
+
 .reader-home .game-intro{grid-column:1;grid-row:1;max-width:none}
+
 .reader-home .game-recent{grid-column:2;grid-row:1;width:100%;max-width:none}
+
 .reader-home .game-petals{z-index:0}
+
 .reader-home .reader-feed-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}
+
 .reader-home .game-recent .lobby-heading{font-size:42px;text-align:left;margin:4px 0 0}
+
 .reader-home .game-recent .lobby-section-label{text-align:left;margin:0!important}
+
 .reader-home .reader-feed-heading>a{color:#d9e5f5;font:500 13px var(--ow-body);padding:10px 0;text-decoration:none;white-space:nowrap}
+
 .reader-shortcuts{display:grid;gap:12px;margin-top:30px}
+
 .reader-home .reader-shortcuts :is(a,button){width:fit-content;background:transparent;border:0;color:#dce6f2;text-align:left;padding:8px 0;font:500 14px/1.5 var(--ow-body);text-decoration:none;cursor:pointer}
+
 .reader-home .reader-shortcuts :is(a,button):hover{color:#ffc46b}
+
 .reader-list{display:grid;gap:16px}
+
 .reader-entry{min-width:0}
+
 .game-lobby .reader-entry-link,.archive-shell .reader-entry-link{display:block;height:100%;padding:24px 26px;background:#233148f5;border:1px solid #ffffff12;border-radius:5px;color:#f0f5fc;text-decoration:none;box-shadow:none;transition:background .15s}
+
 .game-lobby .reader-entry-link:hover,.archive-shell .reader-entry-link:hover{background:#30435f}
+
 .reader-entry-meta{display:flex;align-items:baseline;justify-content:space-between;gap:15px;font:400 12px/1.6 var(--ow-body);color:#b9cae1}
+
 .reader-entry-meta time{white-space:nowrap;font-variant-numeric:tabular-nums}
+
 .game-lobby .reader-entry h3,.archive-shell main .reader-entry h3{font:600 21px/1.55 var(--ow-body);letter-spacing:-.025em;word-break:keep-all;overflow-wrap:anywhere;color:#f3f6fc;margin:12px 0 10px}
+
 .game-lobby .reader-entry p,.archive-shell main .reader-entry p{font:400 14px/1.8 var(--ow-body);color:#c4d2e4;margin:0 0 18px;word-break:keep-all;overflow-wrap:anywhere}
+
 .reader-entry-action{display:flex;align-items:center;gap:8px;font:600 13px/1.6 var(--ow-body);color:#ffc46b}
+
 .reader-entry-link:focus-visible{outline:3px solid #ffc46b;outline-offset:4px}
+
 .archive-shell .reader-list-intro{color:#53647a;margin:0 0 24px;font:400 15px/1.8 var(--ow-body)}
+
 .reader-empty{padding:30px 0}.archive-shell main .reader-empty h3{font:600 22px/1.5 var(--ow-body)}.reader-empty p{font-size:15px}.reader-empty a{display:inline-flex;min-height:44px;align-items:center}
+
 @media(max-width:800px){.reader-home .game-stage{grid-template-columns:minmax(0,1fr);gap:30px;padding:26px 20px 40px!important}.reader-home .game-intro{grid-column:1;grid-row:1}.reader-home .game-recent{grid-column:1;grid-row:2}.reader-home #game-title{font-size:38px;margin-bottom:10px}.reader-home .home-handle{display:inline-block;margin-left:12px;font-size:18px}.reader-home .lobby-name{font-size:22px}.reader-home .lobby-school,.reader-home .lobby-cohort{display:none}.reader-home .reader-shortcuts{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px}.reader-home .game-recent .lobby-heading{font-size:34px}.game-lobby .reader-entry-link,.archive-shell .reader-entry-link{padding:20px}.game-lobby .reader-entry h3,.archive-shell main .reader-entry h3{font-size:19px}.reader-home .game-navigation :is(a,button){font-size:20px;padding:0 9px}}
+
 @media(prefers-reduced-motion:reduce){.reader-entry-link{transition:none!important}}
 
 /* Lijiang skyline: static scenery shared by home and reading pages. */
+
 .reader-home .game-scene{position:fixed;inset:0;width:100%;height:100vh;height:100svh;object-fit:cover;object-position:50% 50%;transform:none}
+
 .reader-home .game-shade{position:fixed;inset:0;background:linear-gradient(90deg,#101b3370,#101b3320 48%,#101b3340),linear-gradient(0deg,#101b3360,transparent 55%)}
+
 .archive-shell::before{background-image:linear-gradient(#14213a99,#14213ab8),url('../img/lijiang-night.jpg');background-position:center;background-size:cover}
+
 .reader-home .reader-entry-link{background:#202d43f5}
+
 @media(max-width:800px){.reader-home .game-scene{object-position:44% center}.reader-home .game-shade{background:#101b3366}.archive-shell::before{background-position:44% center}}
+
+
+/* Theme repair: game typography for navigation, calm typography for reading. */
+.game-lobby .reader-entry h3,.archive-shell main .reader-entry h3{font-family:Koverwatch,var(--ow-body)!important;font-size:29px;font-weight:400;line-height:1.4;letter-spacing:0}
+.reader-entry-meta time{font:400 17px/1.5 Koverwatch,var(--ow-body);color:#d3e0f0}
+.archive-shell.browse-shell main{background:#1e2b40ed!important;border:0!important;border-radius:7px;box-shadow:0 16px 40px #06112533;min-height:0;color:#dbe5f2}
+.archive-shell.browse-shell main>article{max-width:none}
+.archive-shell.browse-shell main .content{max-width:none;color:#dbe5f2}
+.archive-shell.browse-shell main h1,.archive-shell.browse-shell main .dynamic-title{font:400 44px/1.25 Koverwatch,var(--ow-body)!important;color:#f0f5fb;letter-spacing:0;margin:0 0 24px}
+.browse-heading{margin-bottom:26px}.browse-heading>span{display:block;font:500 10px/1.5 var(--ow-body);letter-spacing:.14em;color:#a4b8d2;margin-bottom:10px}.archive-shell.browse-shell .browse-heading h1{margin-bottom:12px}.browse-heading p{font-size:14px;color:#b8c8dd;margin:0}
+.archive-shell.browse-shell .reader-list-intro{color:#b8c8dd}
+.archive-shell.browse-shell .reader-entry-link{background:#2a3a52;border:0}.archive-shell.browse-shell .reader-entry-link:hover{background:#354b67}
+.archive-shell.browse-shell .reader-empty{padding:28px;border-radius:5px;background:#283950;margin:0}
+.archive-shell.browse-shell main .reader-empty h3{font:400 30px/1.4 Koverwatch,var(--ow-body);color:#f0f5fb;margin-top:0}
+.archive-shell.browse-shell .reader-empty p{color:#c0cfe0;font:400 14px/1.8 var(--ow-body)}
+.archive-shell.browse-shell .reader-empty a{color:#ffc46b;border:0;text-decoration:none;font-size:14px}
+.category-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.archive-shell .category-directory a{position:relative;display:block;padding:24px;background:#2a3a52;border:0;border-radius:5px;text-decoration:none;color:#d4e1f2}
+.archive-shell .category-directory a:hover{background:#354b67}
+.archive-shell .category-directory h2{font:400 29px/1.4 Koverwatch,var(--ow-body)!important;color:#f0f5fb;margin:0 0 8px;border:0}
+.category-directory span{font:400 13px/1.7 var(--ow-body);color:#bccce1}.category-directory b{position:absolute;right:20px;bottom:24px;color:#ffc46b;font-weight:400}
+.archive-shell.browse-shell :is(#tags .tag,.tag){background:#2b3d56!important;border-color:#5a6c84!important;color:#e3edf9!important}
+.archive-shell #panel-wrapper .access .tag{background:#27374f!important;color:#e2ebf6!important;border-color:#61718a!important}
+.archive-shell.browse-shell #page-tag a{color:#dfeafa}.archive-shell.browse-shell #page-tag .text-muted{color:#aebfd4!important}
+.archive-shell.browse-shell #page-tag .dash{border-color:#506079}
+@media(max-width:700px){.game-lobby .reader-entry h3,.archive-shell main .reader-entry h3{font-size:26px}.archive-shell.browse-shell main h1,.archive-shell.browse-shell main .dynamic-title{font-size:36px!important}.category-directory{grid-template-columns:1fr}.archive-shell.browse-shell .reader-empty{padding:22px}}
+
+/* Give browsing pages one clear reading column rather than stale sidebar lists. */
+.archive-shell.browse-shell #panel-wrapper{display:none!important}
+.archive-shell.browse-shell main{flex:0 0 100%;width:100%;max-width:100%}
+.archive-shell.browse-shell #main-wrapper>.container{max-width:1060px}
+.archive-shell.browse-shell main>article>header{max-width:none;margin-left:0;margin-right:0}
+.archive-shell #panel-wrapper #trending-tags a{background:#27374f!important;color:#e2ebf6!important;border-color:#61718a!important}

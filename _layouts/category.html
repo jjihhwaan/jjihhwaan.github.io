@@ -1,9 +1,5 @@
 ---
 layout: page
 ---
-
-<p class="reader-list-intro">
-  {{ page.title | escape }} 분야의 글 모음
-</p>
-
+<header class="browse-heading"><span>ARTICLES / CATEGORY</span><h1>{{ page.title | escape }}</h1><p>분야별 학습 기록</p></header>
 {% include reader-list.html posts=page.posts %}
