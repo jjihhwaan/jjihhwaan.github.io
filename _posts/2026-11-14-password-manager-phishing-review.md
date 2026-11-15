@@ -186,7 +186,14 @@ LostPass는 가짜 세션 만료 알림으로 사용자를 유도하고, 정상�
 
 ---
 
-#### 4.1.2 LastPass — 낮은 마스터 비밀번호 입력률의 원인
+
+---
+
+<div style="border-left: 5px solid #4b83c5; background: rgba(75,131,197,0.10); padding: 16px 20px; margin: 32px 0 24px; border-radius: 6px;">
+  <h4 style="font-size: 1.3rem; font-weight: 800; margin: 0;">
+    4.1.2 LastPass — 낮은 마스터 비밀번호 입력률의 원인
+  </h4>
+</div>
 
 연구진은 LastPass의 낮은 입력률을 이해하기 위해 사용자 행동을 추가로 분석했다.
 
