@@ -9780,14 +9780,22 @@ body.archive-shell.reading-post article > .content h2 {
   margin-bottom: 0.8em;
 }
 
-/* 큰 소제목 위 짧은 주황색 포인트 */
+ /* 제목 왼쪽에 붙는 주황색 포인트 */
+body.archive-shell.reading-post article > .content h2 {
+  position: relative;
+  padding-left: 15px;
+}
+
 body.archive-shell.reading-post article > .content h2::before {
   content: "";
-  display: block;
-  width: 28px;
-  height: 3px;
-  margin-bottom: 12px;
-  background: #f99e1a;
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 3px;
+  height: 0.9em;
+  margin: 0;
+  background: #e99016;
+  border-radius: 1px;  
 }
 
 /* 번호를 제목과 같은 색·굵기로 */
