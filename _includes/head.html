@@ -115,6 +115,8 @@
   <!-- This site uses a fixed light reading palette; do not restore a stored dark theme. -->
 
   {% unless page.layout == 'lobby' %}
+    <!-- Required by Chirpy's search/navigation bundle. The fixed data-bs-theme keeps the reading palette. -->
+    <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
     {% include js-selector.html lang=lang %}
   {% endunless %}
 

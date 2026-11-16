@@ -204,15 +204,7 @@ title: 홈
 
 
 
-  <dialog class="game-dialog fields-dialog" id="fields-dialog" aria-labelledby="fields-heading">
-
-
-
-    <div class="dialog-heading"><span>SELECT CATEGORY</span><button class="dialog-close" type="button" data-close aria-label="학습 분야 닫기">×</button></div><h2 id="fields-heading">학습 분야</h2><p class="dialog-description">분야별 학습 기록과 활동</p><div class="game-category-grid"><a class="game-category" href="{{ '/categories/개발/' | relative_url }}"><i class="fas fa-code" aria-hidden="true"></i><span><strong>개발</strong><small>코드 구현과 문제 해결</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/ctf-wargame/' | relative_url }}"><i class="fas fa-flag" aria-hidden="true"></i><span><strong>CTF/Wargame</strong><small>문제 분석과 풀이 기록</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/bug-bounty/' | relative_url }}"><i class="fas fa-bug" aria-hidden="true"></i><span><strong>Bug Bounty</strong><small>웹 취약점 학습 기록</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/블로그-기술문서/' | relative_url }}"><i class="fas fa-file-lines" aria-hidden="true"></i><span><strong>블로그/기술문서</strong><small>읽은 자료와 학습 노트</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/논문-컨퍼런스/' | relative_url }}"><i class="fas fa-book-open" aria-hidden="true"></i><span><strong>논문/컨퍼런스</strong><small>논문과 발표 내용 정리</small></span><b aria-hidden="true">↗</b></a><a class="game-category" href="{{ '/categories/공모전-자격증/' | relative_url }}"><i class="fas fa-award" aria-hidden="true"></i><span><strong>공모전/자격증</strong><small>준비 과정과 활동 기록</small></span><b aria-hidden="true">↗</b></a></div><div class="dialog-footer"><a href="{{ '/categories/' | relative_url }}">카테고리 전체 보기 ↗</a><span><kbd>ESC</kbd> 닫기</span></div>
-
-
-
-  </dialog>
+  {% include study-fields.html %}
 
 
 

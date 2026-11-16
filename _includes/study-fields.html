@@ -1,0 +1,21 @@
+<dialog class="game-dialog fields-dialog study-fields" id="fields-dialog" aria-labelledby="fields-heading">
+  <div class="dialog-heading">
+    <span>SELECT CATEGORY</span>
+    <button class="dialog-close" type="button" data-close aria-label="학습 분야 닫기">×</button>
+  </div>
+  <h2 id="fields-heading">학습 분야</h2>
+  <p class="dialog-description">분야별 학습 기록과 활동</p>
+  <div class="game-category-grid">
+    {% for field in site.data.study_fields %}
+    <a class="game-category" href="{{ '/categories/' | append: field.slug | append: '/' | relative_url }}">
+      <i class="fas fa-{{ field.icon }}" aria-hidden="true"></i>
+      <span><strong>{{ field.name | escape }}</strong><small>{{ field.description | escape }}</small></span>
+      <b aria-hidden="true">↗</b>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="dialog-footer">
+    <a href="{{ '/categories/' | relative_url }}">카테고리 전체 보기 ↗</a>
+    <span><kbd>ESC</kbd> 닫기</span>
+  </div>
+</dialog>

@@ -9825,3 +9825,105 @@ body.archive-shell.reading-post article > .content h3 {
     font-size: 19px !important;
   }
 }
+
+/* Shared navigation panels: identical on the lobby and reading pages. */
+body .study-fields {
+  box-sizing: border-box;
+  width: 820px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 30px;
+  margin: auto;
+  border: 1px solid #516078;
+  border-radius: 8px;
+  background: #202a39;
+  color: #edf3fb;
+  box-shadow: 0 24px 80px #07101b66;
+}
+body .study-fields .dialog-heading {color:#b8c9de; margin:0 0 20px; font:400 16px/1.4 Koverwatch,var(--ow-body); letter-spacing:.09em}
+body .study-fields h2 {font:400 42px/1.2 Koverwatch,var(--ow-body); color:#f2f6fc; margin:0; padding:0; border:0}
+body .study-fields .dialog-description {font:400 20px/1.5 Koverwatch,var(--ow-body); color:#c5d3e4; margin:10px 0 0!important}
+body .study-fields .dialog-close {display:grid; place-items:center; flex:0 0 44px; width:44px; height:44px; padding:0; border:0; border-radius:5px; background:#ffffff08; color:#edf3fa; font:400 30px/1 sans-serif; cursor:pointer}
+body .study-fields .dialog-close:hover {background:#ffffff18; color:#ffc46b}
+body .study-fields .game-category-grid {gap:12px; margin:24px 0}
+body .study-fields .game-category {display:flex; align-items:center; gap:14px; padding:20px 18px; background:#2b394e; border:0!important; border-radius:5px; text-decoration:none; box-shadow:none!important}
+body .study-fields .game-category strong {color:#edf3fb; font:400 28px/1.25 Koverwatch,var(--ow-body)}
+body .study-fields .game-category small {font:400 18px/1.5 Koverwatch,var(--ow-body); color:#bbcade; margin-top:6px}
+body .study-fields .game-category>i {color:#aabed6}
+body .study-fields .game-category b {color:#c5d6eb}
+body .study-fields .game-category:hover {background:#364b65; border:0}
+body .study-fields .game-category:hover strong,body .study-fields .game-category:hover b {color:#ffc46b}
+body .study-fields .dialog-footer {border:0; padding:0; align-items:center; color:#bdcbdf; font:400 18px/1.5 Koverwatch,var(--ow-body)}
+body .study-fields .dialog-footer a {color:#d9e5f5; border:0; text-decoration:none; padding:10px 0}
+body .study-fields :is(a,button):focus-visible {outline:2px solid #ffc46b; outline-offset:4px}
+
+/* The directory is navigation, not article prose. Reset inherited h2 spacing. */
+body.archive-shell main .category-directory {gap:14px}
+body.archive-shell main .category-directory>a {display:flex; align-items:center; gap:18px; padding:24px; min-height:142px; background:#293a52; color:#edf3fb; border:1px solid #42546d; border-radius:6px; transition:background .15s,border-color .15s}
+body.archive-shell main .category-directory>a:hover {background:#324861; border-color:#8296af}
+body.archive-shell main .category-directory .category-icon {flex:0 0 26px; color:#a9bed8; font-size:22px; text-align:center}
+body.archive-shell main .category-directory .category-copy {flex:1; min-width:0}
+body.archive-shell main .category-directory h2 {font:400 29px/1.3 Koverwatch,var(--ow-body)!important; color:#f0f5fb!important; margin:0!important; padding:0!important; border:0; letter-spacing:0}
+body.archive-shell main .category-directory h2::before {content:none}
+body.archive-shell main .category-directory p {font:400 19px/1.5 Koverwatch,var(--ow-body); color:#c6d5e8; margin:5px 0 8px}
+body.archive-shell main .category-directory span {font:400 12px/1.6 var(--ow-body); color:#b9cae0}
+body.archive-shell main .category-directory b {position:static; color:#ffc46b; font-size:20px; font-weight:400}
+
+/* Compact display type for wayfinding; article content keeps its reading font. */
+body.archive-shell #breadcrumb {min-width:0; padding-left:0; font:400 21px/1.4 Koverwatch,var(--ow-body); letter-spacing:.015em}
+body.archive-shell #breadcrumb :is(a,span) {font:inherit; color:#dae5f5!important}
+body.archive-shell #breadcrumb>span:last-child {color:#b9cbe3!important}
+body.archive-shell #breadcrumb>span+span::before {color:#8dabc9; padding:0 10px}
+body.archive-shell #breadcrumb a:hover {color:#ffc46b!important}
+body.archive-shell .reading-return a,body.archive-shell .reader-action {font:400 21px/1.4 Koverwatch,var(--ow-body)}
+body.archive-shell.browse-shell #tags a.tag {font-family:Koverwatch,var(--ow-body)!important; font-size:20px; font-weight:400; letter-spacing:.02em; background:#293a52!important; color:#edf3fb!important; border:1px solid #607791!important; border-radius:4px; padding:7px 12px; box-shadow:none}
+body.archive-shell.browse-shell #tags a.tag:hover {background:#354b65!important; color:#ffc46b!important; border-color:#d29a4d!important}
+body.archive-shell.browse-shell #tags a.tag span {color:#becfe4!important; font:400 12px/1.5 var(--ow-body); margin-left:8px}
+body.archive-shell #related-label,body.archive-shell .post-navigation :is(.label,small) {font-family:Koverwatch,var(--ow-body)}
+body.archive-shell #toc-wrapper .panel-heading {font:400 23px/1.4 Koverwatch,var(--ow-body)}
+body.archive-shell .reader-empty h2 {font:400 30px/1.4 Koverwatch,var(--ow-body)!important; color:#eef4fc}
+body.archive-shell .reader-empty p {font:400 21px/1.6 Koverwatch,var(--ow-body)}
+body.archive-shell .reader-empty a {font:400 21px/1.5 Koverwatch,var(--ow-body)}
+
+/* Chirpy 7.6 uses #search (not #search-wrapper). Keep its search behavior. */
+body.archive-shell #topbar {gap:20px; min-height:64px}
+body.archive-shell #topbar #breadcrumb {flex:1; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+body.archive-shell #search {box-sizing:border-box; flex:0 0 244px; width:244px; height:42px; padding:0 12px; gap:10px; border:1px solid #687e9b; border-radius:5px; background:#1b2a40!important; box-shadow:inset 0 1px #ffffff05}
+body.archive-shell #search>i {flex:0 0 18px; width:18px; margin:0; padding:0; color:#b7cce6; font-size:15px}
+body.archive-shell #search-input {min-width:0; width:100%; height:100%; padding:0; margin:0; border:0; border-radius:0; outline:0; box-shadow:none; background:transparent; color:#f2f6fd; font:400 17px/1.5 var(--ow-body)}
+body.archive-shell #search-input::placeholder {color:#bed0e6!important; font:400 21px/1.5 Koverwatch,var(--ow-body); opacity:1}
+body.archive-shell #search:focus-within {border-color:#ffc46b; box-shadow:0 0 0 2px #ffc46b40}
+body.archive-shell #search-trigger {color:#dce8f9; width:42px; height:42px; padding:0; border:1px solid #687e9b; border-radius:5px; background:#1b2a40}
+body.archive-shell #search-cancel {color:#dce8f9; font:400 21px/1.4 Koverwatch,var(--ow-body)}
+body.archive-shell #search-results {background:#202e43; color:#d6e2f2; padding:24px; border-radius:6px; flex-direction:column}
+body.archive-shell #search-results a {color:#eef4fc}
+body.archive-shell #search-results article {width:100%; max-width:none; padding:18px 0!important; margin:0}
+body.archive-shell #search-results article>header {max-width:none; width:100%; margin:0; padding:0}
+body.archive-shell #search-results article+article {border-top:1px solid #4b5f79}
+body.archive-shell #search-results h2 {font:400 28px/1.4 Koverwatch,var(--ow-body); color:#eef4fc; margin:0 0 8px}
+body.archive-shell #search-results article p {color:#c5d5e8!important; font:400 15px/1.8 var(--ow-body); margin:10px 0 0; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden}
+body.archive-shell #search-results .post-meta {color:#b8cbe3!important; font:400 12px/1.7 var(--ow-body)}
+body.archive-shell #search-results .post-meta * {color:inherit!important}
+body.archive-shell #search-hints .panel-heading {font:400 24px/1.4 Koverwatch,var(--ow-body); color:#eaf1fc}
+body.archive-shell #search-hints .post-tag {background:#293a52; color:#e0eafb; border:1px solid #68809d}
+@media(max-width:800px) {
+  body .study-fields {width:680px; padding:22px}
+  body .study-fields .game-category {padding:16px}
+  body .study-fields .game-category-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px) {
+  body.archive-shell #topbar {gap:12px; min-height:58px}
+  body.archive-shell #breadcrumb {font-size:20px}
+  body.archive-shell #search {flex:1 1 auto; width:auto; min-width:0; margin-left:0!important}
+  body.archive-shell #topbar:has(#search-cancel.d-block) #breadcrumb {display:none!important}
+  body.archive-shell main .category-directory>a {padding:20px; min-height:132px}
+}
+@media(max-width:520px) {
+  body .study-fields .game-category-grid {grid-template-columns:1fr; gap:9px}
+  body .study-fields .game-category strong {font-size:26px}
+  body .study-fields .game-category small {font-size:18px}
+}
+@media(prefers-reduced-motion:reduce) {
+  body .study-fields[open] {animation:none}
+  body.archive-shell main .category-directory>a {transition:none}
+}
