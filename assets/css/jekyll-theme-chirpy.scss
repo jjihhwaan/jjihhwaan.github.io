@@ -9766,3 +9766,54 @@ body.archive-shell.reading-post .content h2 .section-number{color:#a85a00;font-w
 .article-brief>span{display:block;margin-bottom:8px;font:600 12px/1.5 var(--ow-body);color:#4f627a}
 .archive-shell.reading-post .article-brief p{font:400 15px/1.8 var(--ow-body);color:#33455c;margin:0;word-break:keep-all;overflow-wrap:break-word}
 @media(max-width:700px){body.archive-shell.reading-post article>header h1{font-size:34px!important}body.archive-shell.reading-post article>.content h2{font-size:28px!important}.article-brief{padding:18px;margin:24px auto 30px}}
+
+/* 본문 소제목 균형 조정 */
+body.archive-shell.reading-post article > .content h2 {
+  font-family: var(--ow-body) !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.025em;
+  color: #24364f;
+  margin-top: 2.4em;
+  margin-bottom: 0.8em;
+}
+
+/* 큰 소제목 위 짧은 주황색 포인트 */
+body.archive-shell.reading-post article > .content h2::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 12px;
+  background: #f99e1a;
+}
+
+/* 번호를 제목과 같은 색·굵기로 */
+body.archive-shell.reading-post .content h2 .section-number {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* 작은 소제목 */
+body.archive-shell.reading-post article > .content h3 {
+  font-family: var(--ow-body) !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+  color: #34465e;
+  margin-top: 1.6em;
+  margin-bottom: 0.7em;
+}
+
+@media (max-width: 700px) {
+  body.archive-shell.reading-post article > .content h2 {
+    font-size: 23px !important;
+  }
+
+  body.archive-shell.reading-post article > .content h3 {
+    font-size: 19px !important;
+  }
+}
