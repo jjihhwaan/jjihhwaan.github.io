@@ -10008,3 +10008,63 @@ body.archive-shell #tail-wrapper footer {
   body.archive-shell #topbar {min-height: 58px}
   body.archive-shell #search {flex: 1 1 auto; width: auto; max-width: none}
 }
+
+/* Desktop article contents: keep labels readable without the theme's rail. */
+body.archive-shell #panel-wrapper #toc-wrapper > * {
+  border-left: 0;
+}
+body.archive-shell #panel-wrapper #toc-wrapper #toc {
+  position: relative;
+}
+body.archive-shell #panel-wrapper #toc-wrapper .toc-link::before,
+body.archive-shell #panel-wrapper #toc-wrapper .toc-link::after {
+  content: none !important;
+  display: none !important;
+}
+body.archive-shell #panel-wrapper #toc-wrapper .toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.archive-shell #panel-wrapper #toc-wrapper .toc-list .toc-list {
+  padding-left: 12px;
+}
+/* Hide collapsed descendants completely, including keyboard focus targets. */
+body.archive-shell #panel-wrapper #toc-wrapper .is-collapsed {
+  visibility: hidden;
+}
+body.archive-shell #panel-wrapper #toc-wrapper a.toc-link {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  text-overflow: clip;
+  overflow: visible;
+  font: 500 14px/1.6 var(--ow-body);
+  color: #dce5f1 !important;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: none;
+}
+body.archive-shell #panel-wrapper #toc-wrapper a.node-name--H3,
+body.archive-shell #panel-wrapper #toc-wrapper a.node-name--H4 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #b9c9dd !important;
+}
+body.archive-shell #panel-wrapper #toc-wrapper a.toc-link:hover {
+  color: #fff !important;
+  background: #ffffff0a;
+}
+body.archive-shell #panel-wrapper #toc-wrapper a.toc-link.is-active-link {
+  color: #ffd08a !important;
+  background: #ffc46b10;
+}
+body.archive-shell #panel-wrapper #toc-wrapper a.toc-link:focus-visible {
+  outline: 2px solid #ffc46b;
+  outline-offset: -2px;
+}
