@@ -9927,3 +9927,84 @@ body.archive-shell #search-hints .post-tag {background:#293a52; color:#e0eafb; b
   body .study-fields[open] {animation:none}
   body.archive-shell main .category-directory>a {transition:none}
 }
+
+/* Keep the toolbar in normal flow, with clear space above the content panels. */
+body.archive-shell #topbar-wrapper {
+  height: auto !important;
+  min-height: 0;
+  margin: 0 !important;
+  padding: 0 0 18px !important;
+  border-bottom: 0;
+}
+body.archive-shell #topbar {
+  height: auto !important;
+  min-height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+}
+body.archive-shell #search {
+  flex: 0 0 244px;
+  width: 244px;
+  max-width: 244px;
+  margin: 0 !important;
+}
+
+/* Align the contents rail with the right edge of the toolbar. */
+body.archive-shell #panel-wrapper {
+  padding-left: 24px !important;
+  padding-right: 0 !important;
+}
+body.archive-shell #panel-wrapper #toc-wrapper {
+  top: 24px;
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  margin-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #607791 #1e2d44;
+}
+body.archive-shell #toc-wrapper::before,
+body.archive-shell #toc-wrapper::after {
+  display: none !important;
+  content: none !important;
+}
+body.archive-shell #toc-wrapper #toc {
+  max-height: none;
+  overflow: visible;
+}
+body.archive-shell #panel-wrapper #toc-wrapper .panel-heading {
+  font: 400 24px/1.4 Koverwatch, var(--ow-body);
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+}
+
+/* The footer follows the width of its page, including full-width browse pages. */
+body.archive-shell #tail-wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+body.archive-shell.browse-shell #tail-wrapper {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+body.archive-shell #tail-wrapper footer {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #ffffff25;
+}
+@media (max-width: 1199.98px) {
+  body.archive-shell main,
+  body.archive-shell #tail-wrapper {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 700px) {
+  body.archive-shell #topbar-wrapper {padding-bottom: 14px !important}
+  body.archive-shell #topbar {min-height: 58px}
+  body.archive-shell #search {flex: 1 1 auto; width: auto; max-width: none}
+}
