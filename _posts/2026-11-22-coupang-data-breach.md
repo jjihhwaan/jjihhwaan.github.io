@@ -31,6 +31,8 @@ tags: [knights-frontier, security-incident, coupang, authentication, ISMS-P]
 
 이름, 이메일 주소, 전화번호, 배송지 주소 등이 영향을 받았으며, 일부 이용자의 주문 내역도 유출된 것으로 확인됐다.
 
+---
+
 ### 1.1 주요 사건 일지
 
 | 시기 | 내용 |
@@ -54,6 +56,8 @@ tags: [knights-frontier, security-incident, coupang, authentication, ISMS-P]
 ## 2. 인증 토큰은 어떻게 위조됐을까?
 
 사고를 이해하려면 먼저 인증 토큰과 서명 키가 어떤 역할을 하는지 알아야 한다.
+
+---
 
 ### 2.1 인증 토큰(Authentication Token)
 
@@ -122,6 +126,8 @@ tags: [knights-frontier, security-incident, coupang, authentication, ISMS-P]
 처음에는 퇴사자가 서명 키를 가지고 있었던 것이 사고의 가장 큰 원인이라고 생각했다.
 
 그러나 조사 결과를 보면 키 관리 외에도 개발·운영 권한 분리와 이상 징후 탐지 등 여러 부분에서 문제가 확인됐다.
+
+---
 
 ### 3.1 개발자에게 운영용 키 접근 권한이 있었다
 
@@ -223,6 +229,8 @@ tags: [knights-frontier, security-incident, coupang, authentication, ISMS-P]
 특히 자료를 읽던 중 ISMS-P와 CISO라는 용어가 눈에 들어왔다.
 
 대학교에서 수강했던 **사이버법과정책** 과목에서 배웠던 개념들이다. 당시에는 관련 제도와 역할을 중심으로 공부했는데, 실제 사고 조사에서 어떻게 다뤄지는지 확인할 수 있었다.
+
+---
 
 ### 5.1 ISMS-P 인증과 실제 운영 사이
 
