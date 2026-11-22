@@ -5,8 +5,6 @@ categories: [블로그/기술문서]
 tags: [knights-frontier, security-incident, coupang, authentication, ISMS-P]
 ---
 
-# 쿠팡 개인정보 유출 사고 분석
-
 2025년 11월, 쿠팡에서 대규모 개인정보 유출 사고가 발생한 사실이 알려졌다.
 
 처음에는 퇴사한 직원이 서명 키를 탈취했다는 정도로 이해했다. 그런데 정부 조사 결과를 읽어보니 생각보다 많은 문제가 얽혀 있었다.
