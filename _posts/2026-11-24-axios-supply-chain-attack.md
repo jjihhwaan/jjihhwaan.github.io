@@ -3,6 +3,7 @@ title: "Axios 공급망 공격 분석 | npm 계정 탈취와 악성 패키지 �
 date: 2026-11-24 01:00:00 +0900
 categories: [블로그/기술문서]
 tags: [knights-frontier, security-incident, axios, npm, supply-chain, RAT]
+mermaid: true
 ---
 
 2026년 3월 31일, JavaScript에서 널리 사용되는 Axios 라이브러리의 공식 npm 패키지에 악성코드가 포함된 사건이 발생했다.
