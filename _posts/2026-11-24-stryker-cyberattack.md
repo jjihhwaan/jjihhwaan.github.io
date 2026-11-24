@@ -28,6 +28,10 @@ mermaid: true
 
 Stryker는 미국의 의료기기 제조기업으로, 수술 장비와 정형외과 의료기기, 응급의료 관련 제품 등을 공급하고 있다.
 
+![미국 일리노이주 Cary에 위치한 Stryker 사무소](https://static.wixstatic.com/media/fb95d3_4f3556b2a3df420c8fa3405c99d895fc~mv2.jpg/v1/fill/w_1000%2Ch_650%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/fb95d3_4f3556b2a3df420c8fa3405c99d895fc~mv2.jpg)
+
+*미국 일리노이주 Cary에 위치한 Stryker 사무소 (출처: [Stryker Careers Blog](https://www.strykercareersblog.com/post/10-reasons-to-join-stryker-in-cary-illinois))*
+
 2026년 3월 11일 발생한 사이버 공격으로 Stryker의 내부 IT 환경에서 장애가 발생했으며, 주문 처리와 제조, 배송 등의 업무에도 차질이 생겼다.
 
 Stryker는 사고 발생 이후 외부 보안 전문가 및 관계 기관과 협력해 조사와 복구 작업을 진행했다고 밝혔다.
@@ -78,6 +82,10 @@ Microsoft Intune은 기업에서 PC, 노트북, 스마트폰 등의 기기를 �
 이러한 서비스를 단말 관리 시스템(Endpoint Management System)이라고 한다.
 
 기업의 관리자는 Intune을 통해 기기에 보안 정책을 적용하거나 소프트웨어를 배포할 수 있으며, 필요에 따라 기기에 저장된 데이터를 원격으로 삭제할 수도 있다.
+
+![Microsoft Intune의 원격 관리 기능 예시 화면](https://learn.microsoft.com/ko-kr/intune/intune-service/industry/education/tutorial-school-deployment/images/intune-remote-actions-windows.png)
+
+*Microsoft Intune 관리 화면 예시. 상단의 Wipe 기능으로 관리 대상 기기의 초기화를 요청할 수 있다. 실제 Stryker 사고 당시의 화면은 아니다. (출처: [Microsoft Learn](https://learn.microsoft.com/ko-kr/intune/solutions/education/tutorial-school-deployment/manage-overview))*
 
 예를 들어 직원이 회사에서 지급한 노트북을 분실했다면, 관리자는 원격 초기화 기능을 이용해 기기에 저장된 기업 정보가 외부로 유출될 위험을 줄일 수 있다.
 
@@ -141,7 +149,7 @@ flowchart TD
     linkStyle default stroke:#94A3B8,stroke-width:2px
 ```
 
-*공개된 보안 분석을 바탕으로 정리한 공격 흐름이며, 최초 계정 침해 방법과 일부 관리자 설정은 확인되지 않았다.*
+*공개된 외부 보안 분석을 바탕으로 정리한 흐름이며, 최초 계정 침해 방법과 일부 관리자 설정은 확인되지 않았다.*
 
 여기서 Intune이 한 명의 관리자만 사용하는 시스템이라는 뜻은 아니다.
 
@@ -288,17 +296,39 @@ Stryker는 3월 13일 공식 발표에서 기업 사이버보안팀과 제품 �
 
 ### 4.4 생각해 본 개선 방안
 
-| 보안 조치 | 기대할 수 있는 효과 |
-|---|---|
-| 최소 권한 원칙 및 MFA | 관리자 계정 침해 위험과 권한 남용 범위 제한 |
-| 복수 관리자 승인 | 한 계정만으로 중요한 작업을 실행하기 어렵게 함 |
-| 이상 징후 탐지 | 승인된 작업에서도 비정상적인 행동을 발견하고 대응 |
+앞서 살펴본 보안 조치를 세 단계로 정리해 봤다.
 
-세 가지 방법은 서로 다른 단계에서 작동한다.
+**관리자 권한 보호를 위한 세 단계**
 
-계정 자체를 보호하는 방법이 있고, 중요한 명령을 실행하기 전에 추가로 확인하는 방법도 있다. 마지막으로 승인된 작업이더라도 평소와 다르다면 이를 탐지하는 방법을 고려할 수 있다.
+```mermaid
+flowchart TD
+    A["01  계정 보호<br/>최소 권한 · MFA"]
+    B["02  중요 작업 승인<br/>복수 관리자 승인"]
+    C["03  이상 징후 탐지<br/>대량 초기화 감시"]
 
-이번 사고를 조사하면서 관리자 권한을 보호하는 방법을 단순히 로그인 인증에만 한정해서 생각할 필요는 없겠다는 생각이 들었다.
+    A --> B
+    B --> C
+
+    classDef protect fill:#DBEAFE,stroke:#3B82F6,color:#1E3A8A,stroke-width:2px
+    classDef approve fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95,stroke-width:2px
+    classDef detect fill:#DCFCE7,stroke:#22C55E,color:#166534,stroke-width:2px
+
+    class A protect
+    class B approve
+    class C detect
+
+    linkStyle default stroke:#94A3B8,stroke-width:2px
+```
+
+첫 번째는 관리자 계정 자체를 보호하고 불필요한 권한을 제한하는 것이다.
+
+두 번째는 원격 초기화처럼 영향이 큰 작업에 다른 관리자의 승인을 요구하는 방법이다.
+
+마지막은 정상적으로 승인된 작업이라도 대량 초기화처럼 평소와 다른 행동이 발생하는지 탐지하는 것이다.
+
+세 가지 조치를 함께 고려한다면 계정이 침해되더라도 피해가 곧바로 대규모 장애로 이어지는 위험을 줄이는 데 도움이 될 것으로 보인다.
+
+물론 이는 이번 사고를 살펴보면서 생각한 개선 방향이며, Stryker가 실제로 어떤 조치를 운영하지 않았는지 확인한 결과는 아니다.
 
 ---
 
@@ -436,3 +466,5 @@ Stryker는 평상시 이상 징후를 모니터링하고 있었다고 밝혔지�
 3. [CISA, Endpoint Management System Hardening Alert (2026.03.18)](https://content.govdelivery.com/accounts/USDHSCISA/bulletins/40ef439)
 4. [BleepingComputer, Stryker Attack Wiped Tens of Thousands of Devices (2026.03.16)](https://www.bleepingcomputer.com/news/security/stryker-attack-wiped-tens-of-thousands-of-devices-no-malware-needed/)
 5. [Microsoft Learn, Use Multi Admin Approval in Intune](https://learn.microsoft.com/en-us/intune/fundamentals/role-based-access-control/multi-admin-approval)
+6. [Microsoft Learn, Intune Device Management](https://learn.microsoft.com/ko-kr/intune/solutions/education/tutorial-school-deployment/manage-overview)
+7. [Stryker Careers Blog, 9 Reasons to Love Stryker in Illinois](https://www.strykercareersblog.com/post/10-reasons-to-join-stryker-in-cary-illinois)
