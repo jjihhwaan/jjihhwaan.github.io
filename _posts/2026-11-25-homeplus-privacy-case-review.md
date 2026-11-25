@@ -259,6 +259,39 @@ tags: [knights-frontier, privacy, personal-information, case-law, homeplus]
     font-size: .95em;
   }
 }
+
+/* 모든 표의 텍스트 넘침 및 줄바꿈 문제 수정 */
+.content table th,
+.content table td,
+table.hp-compare th,
+table.hp-compare td {
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: anywhere !important;
+  vertical-align: top !important;
+  line-height: 1.7 !important;
+  box-sizing: border-box !important;
+}
+
+/* 비교표의 열 너비 고정 */
+table.hp-compare {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed !important;
+}
+
+table.hp-compare th,
+table.hp-compare td {
+  width: 50% !important;
+}
+
+/* 셀 내부 강조 문구도 줄바꿈 허용 */
+table.hp-compare td strong,
+table.hp-compare td span {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+
 </style>
 
 ## 1. 들어가며
