@@ -118,12 +118,21 @@ tags: [knights-frontier, privacy, personal-information, case-law, homeplus]
   text-align: center;
 }
 
+/* 판결문 인용 출처 */
 .hp-source {
   display: block;
   font-size: .78em;
-  opacity: .75;
+  opacity: .85;
   text-align: right;
-  margin: -8px 0 20px;
+  border-bottom: 1px solid rgba(148,163,184,.35);
+  padding-bottom: 12px;
+  margin: 6px 0 24px;
+}
+
+.hp-source a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .hp-caption {
@@ -160,6 +169,25 @@ tags: [knights-frontier, privacy, personal-information, case-law, homeplus]
   }
 }
 </style>
+
+/* 일반 표의 세로 구분선 */
+table:not(.hp-compare) th:not(:last-child),
+table:not(.hp-compare) td:not(:last-child) {
+  border-right: 1px solid rgba(148, 163, 184, 0.65) !important;
+}
+
+/* 일반 표의 첫 번째 열 강조 */
+table:not(.hp-compare) tbody td:first-child {
+  font-weight: 500;
+}
+
+/* 표 내부 여백 및 정렬 */
+table:not(.hp-compare) th,
+table:not(.hp-compare) td {
+  padding: 12px 16px !important;
+  vertical-align: middle;
+  line-height: 1.7;
+}
 
 ## 1. 들어가며
 
@@ -380,11 +408,24 @@ tags: [knights-frontier, privacy, personal-information, case-law, homeplus]
 
 대법원은 개인정보에 대한 동의를 받는 행위만 따로 떼어 판단해서는 안 된다고 보았다.
 
-> 개인정보처리자가 개인정보를 취득하거나 처리에 관한 동의를 받게 된 전 과정을 살펴보아
+> 개인정보처리자가 개인정보를 취득하거나 처리에 관한 동의를 받게 된 전 과정을 살펴보아 […] 종합적으로 고려하여 사회통념에 따라 판단하여야 한다.
 
-<span class="hp-source">출처: 대법원 2017. 4. 7. 선고 2016도13263 판결</span>
+<span class="hp-source">출처: <a href="https://www.law.go.kr/LSW/precInfoP.do?precSeq=184700">대법원 2017. 4. 7. 선고 2016도13263 판결</a> (일부 생략)</span>
 
-동의 문구가 존재한다는 사실뿐만 아니라 개인정보를 수집하게 된 목적과 과정, 광고 내용, 개인정보의 종류와 규모 등을 함께 고려해야 한다는 것이다.
+즉, 동의 문구가 존재한다는 사실만으로 판단하는 것이 아니라 개인정보를 수집하고 동의를 받는 과정 전체를 고려해야 한다는 것이다.
+
+**대법원이 제시한 판단 기준**
+
+| 판단 기준 | 주요 내용 |
+|---|---|
+| 수집 동기와 목적 | 어떤 이유와 목적으로 개인정보를 수집했는가? |
+| 수집 항목의 관련성 | 수집한 개인정보가 해당 목적에 필요한 정보인가? |
+| 수집 방법 | 어떤 방식으로 개인정보를 수집하고 동의를 받았는가? |
+| 법령 준수 여부 | 개인정보 보호법 등 관련 법령을 준수했는가? |
+| 개인정보의 내용과 규모 | 어떤 종류의 개인정보를 얼마나 수집했는가? |
+| 민감정보 및 고유식별정보 | 민감정보나 주민등록번호 등이 포함되어 있는가? |
+
+대법원은 이러한 판단 기준을 홈플러스 경품행사에 적용했다.
 
 **대법원이 중요하게 본 부분**
 
