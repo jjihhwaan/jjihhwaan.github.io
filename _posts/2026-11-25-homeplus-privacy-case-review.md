@@ -168,7 +168,6 @@ tags: [knights-frontier, privacy, personal-information, case-law, homeplus]
     padding: 8px 10px;
   }
 }
-</style>
 
 /* 일반 표의 세로 구분선 */
 table:not(.hp-compare) th:not(:last-child),
@@ -188,6 +187,8 @@ table:not(.hp-compare) td {
   vertical-align: middle;
   line-height: 1.7;
 }
+  
+</style>
 
 ## 1. 들어가며
 
