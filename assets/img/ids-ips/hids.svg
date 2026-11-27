@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <rect width="760" height="420" rx="16" fill="#f8fafc"/>
+  <rect x="20" y="20" width="720" height="380" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="380" y="60" font-size="24" font-weight="bold" fill="#1e293b">Host (PC / Server)</text>
+
+    <g fill="#f1f5f9" stroke="#cbd5e1">
+      <rect x="45" y="85" width="325" height="90" rx="10"/>
+      <rect x="390" y="85" width="325" height="90" rx="10"/>
+      <rect x="45" y="190" width="325" height="90" rx="10"/>
+      <rect x="390" y="190" width="325" height="90" rx="10"/>
+    </g>
+
+    <g font-size="20" font-weight="bold" fill="#334155">
+      <text x="207" y="122">시스템 로그</text>
+      <text x="552" y="122">파일 변경</text>
+      <text x="207" y="227">프로세스 실행</text>
+      <text x="552" y="227">네트워크 연결</text>
+    </g>
+
+    <g font-size="15" fill="#64748b">
+      <text x="207" y="149">System Logs</text>
+      <text x="552" y="149">File Integrity</text>
+      <text x="207" y="254">Process Monitoring</text>
+      <text x="552" y="254">Network Connections</text>
+    </g>
+
+    <rect x="45" y="305" width="670" height="75" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="380" y="336" font-size="23" font-weight="bold" fill="#1d4ed8">HIDS Agent</text>
+    <text x="380" y="362" font-size="17" fill="#334155">호스트 내부 이벤트 수집 및 분석</text>
+  </g>
+</svg>
