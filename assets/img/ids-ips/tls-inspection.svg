@@ -1,6 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570">
   <rect width="760" height="570" rx="16" fill="#f8fafc"/>
 
+  <defs>
+    <marker id="greenArrow" markerUnits="userSpaceOnUse"
+            markerWidth="10" markerHeight="10"
+            refX="10" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/>
+    </marker>
+
+    <marker id="blueArrow" markerUnits="userSpaceOnUse"
+            markerWidth="10" markerHeight="10"
+            refX="10" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
   <g font-family="Arial, sans-serif" text-anchor="middle">
 
     <!-- Normal HTTPS -->
@@ -18,11 +32,16 @@
           fill="#f1f5f9" stroke="#94a3b8"/>
     <text x="650" y="117" font-size="20" fill="#334155">Server</text>
 
-    <path d="M175 110 H575" stroke="#16a34a" stroke-width="3"/>
-    <polygon points="575,110 563,104 563,116" fill="#16a34a"/>
+    <path d="M175 110 H280"
+          stroke="#16a34a" stroke-width="2.5"/>
+
+    <path d="M480 110 H579"
+          stroke="#16a34a" stroke-width="2.5"
+          marker-end="url(#greenArrow)"/>
 
     <rect x="280" y="91" width="200" height="38" rx="6"
           fill="#dcfce7" stroke="#16a34a"/>
+
     <text x="380" y="116" font-size="16" font-weight="bold"
           fill="#166534">암호화된 TLS 연결</text>
 
@@ -53,9 +72,9 @@
       암호화된 데이터 해석
     </text>
 
-    <!-- Arrow 1 -->
-    <path d="M380 353 V370" stroke="#2563eb" stroke-width="2.5"/>
-    <polygon points="380,373 375,365 385,365" fill="#2563eb"/>
+    <path d="M380 352 V374"
+          stroke="#2563eb" stroke-width="2"
+          marker-end="url(#blueArrow)"/>
 
     <!-- Inspection -->
     <rect x="280" y="379" width="200" height="48" rx="7"
@@ -66,9 +85,9 @@
       공격 패턴 및 위협 분석
     </text>
 
-    <!-- Arrow 2 -->
-    <path d="M380 432 V449" stroke="#2563eb" stroke-width="2.5"/>
-    <polygon points="380,452 375,444 385,444" fill="#2563eb"/>
+    <path d="M380 431 V453"
+          stroke="#2563eb" stroke-width="2"
+          marker-end="url(#blueArrow)"/>
 
     <!-- Re-encryption -->
     <rect x="280" y="458" width="200" height="48" rx="7"
@@ -84,10 +103,11 @@
           fill="#f1f5f9" stroke="#94a3b8"/>
     <text x="105" y="331" font-size="19" fill="#334155">Client</text>
 
-    <!-- TLS Connection 1 -->
-    <path d="M165 324 H272" stroke="#16a34a" stroke-width="3"/>
-    <polygon points="272,324 261,318 261,330" fill="#16a34a"/>
-    <text x="212" y="307" font-size="13" font-weight="bold"
+    <path d="M165 324 H254"
+          stroke="#16a34a" stroke-width="2.5"
+          marker-end="url(#greenArrow)"/>
+
+    <text x="210" y="307" font-size="13" font-weight="bold"
           fill="#15803d">TLS 연결 1</text>
 
     <!-- Server -->
@@ -95,10 +115,11 @@
           fill="#f1f5f9" stroke="#94a3b8"/>
     <text x="655" y="489" font-size="19" fill="#334155">Server</text>
 
-    <!-- TLS Connection 2 -->
-    <path d="M480 482 H587" stroke="#16a34a" stroke-width="3"/>
-    <polygon points="587,482 576,476 576,488" fill="#16a34a"/>
-    <text x="548" y="465" font-size="13" font-weight="bold"
+    <path d="M480 482 H589"
+          stroke="#16a34a" stroke-width="2.5"
+          marker-end="url(#greenArrow)"/>
+
+    <text x="547" y="465" font-size="13" font-weight="bold"
           fill="#15803d">TLS 연결 2</text>
 
   </g>
