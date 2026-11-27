@@ -1,96 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540">
-  <rect width="760" height="540" rx="16" fill="#f8fafc"/>
-  <rect x="20" y="20" width="720" height="500" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520">
+  <rect width="760" height="520" rx="16" fill="#f8fafc"/>
+  <rect x="24" y="24" width="712" height="472" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
 
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
     </marker>
   </defs>
 
-  <g font-family="Arial, sans-serif" text-anchor="middle">
+  <g font-family="Arial, sans-serif">
+    <text x="42" y="58" font-size="24" font-weight="bold" fill="#1e293b">방화벽 기준 NIDS 설치 위치 비교</text>
+    <text x="42" y="82" font-size="14" fill="#64748b">방화벽 외부와 내부에서 NIDS가 관찰하는 트래픽의 범위를 비교한 구성도</text>
 
-    <!-- Internet -->
-    <rect x="65" y="45" width="250" height="55" rx="9"
-          fill="#f1f5f9" stroke="#94a3b8"/>
-    <text x="190" y="79" font-size="22" font-weight="bold"
-          fill="#334155">Internet</text>
+    <!-- Left flow -->
+    <rect x="70" y="110" width="210" height="56" rx="10" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="175" y="145" text-anchor="middle" font-size="22" font-weight="bold" fill="#334155">Internet</text>
 
-    <!-- External Traffic -->
-    <path d="M190 100 V220" stroke="#64748b" stroke-width="3"
-          marker-end="url(#arrow)"/>
+    <path d="M175 166 V226" stroke="#64748b" stroke-width="4" marker-end="url(#arrowGray)"/>
 
-    <!-- External NIDS -->
-    <path d="M190 150 H380" stroke="#16a34a"
-          stroke-width="3" stroke-dasharray="7 5"/>
-
-    <rect x="380" y="110" width="325" height="95" rx="9"
-          fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-
-    <text x="542" y="139" font-size="21" font-weight="bold"
-          fill="#15803d">① 방화벽 외부 NIDS</text>
-    <text x="542" y="165" font-size="16" fill="#166534">
-      방화벽 도달 전 트래픽 분석
-    </text>
-    <text x="542" y="187" font-size="14" fill="#166534">
-      차단될 공격 시도까지 관찰
-    </text>
-
-    <!-- Firewall -->
-    <rect x="65" y="225" width="250" height="70" rx="8"
-          fill="#334155"/>
-
-    <text x="190" y="251" font-size="20" font-weight="bold"
-          fill="#ffffff">Firewall</text>
-
-    <g stroke="#94a3b8" stroke-width="2">
-      <path d="M85 263 H295 M85 277 H295"/>
-      <path d="M120 252 V263 M190 252 V263 M260 252 V263"/>
-      <path d="M155 263 V277 M225 263 V277"/>
-      <path d="M120 277 V289 M190 277 V289 M260 277 V289"/>
+    <rect x="70" y="240" width="210" height="74" rx="10" fill="#334155"/>
+    <text x="175" y="272" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Firewall</text>
+    <g stroke="#94a3b8" stroke-width="2.3">
+      <path d="M92 286 H258"/>
+      <path d="M92 302 H258"/>
+      <path d="M125 270 V286 M175 270 V286 M225 270 V286"/>
+      <path d="M108 286 V302 M158 286 V302 M208 286 V302"/>
+      <path d="M125 302 V314 M175 302 V314 M225 302 V314"/>
     </g>
 
-    <!-- Blocked Traffic -->
-    <path d="M65 260 H42" stroke="#dc2626" stroke-width="3"/>
-    <path d="M29 251 L43 269 M43 251 L29 269"
-          stroke="#dc2626" stroke-width="3"/>
+    <!-- blocked sign -->
+    <path d="M50 277 H70" stroke="#ef4444" stroke-width="4"/>
+    <path d="M52 260 L66 294 M66 260 L52 294" stroke="#ef4444" stroke-width="4"/>
 
-    <text x="190" y="317" font-size="14" fill="#64748b">
-      접근 제어 정책 적용
-    </text>
+    <text x="175" y="340" text-anchor="middle" font-size="14" fill="#64748b">접근 제어 정책 적용</text>
 
-    <!-- Internal Traffic -->
-    <path d="M190 295 V435" stroke="#64748b" stroke-width="3"
-          marker-end="url(#arrow)"/>
+    <path d="M175 314 V390" stroke="#64748b" stroke-width="4" marker-end="url(#arrowGray)"/>
 
-    <!-- Internal NIDS -->
-    <path d="M190 365 H380" stroke="#16a34a"
-          stroke-width="3" stroke-dasharray="7 5"/>
+    <rect x="70" y="404" width="210" height="56" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="175" y="439" text-anchor="middle" font-size="22" font-weight="bold" fill="#1d4ed8">Internal Network</text>
 
-    <rect x="380" y="325" width="325" height="95" rx="9"
-          fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <!-- Right upper box -->
+    <path d="M175 200 H340" stroke="#16a34a" stroke-width="4" stroke-dasharray="10 7"/>
+    <rect x="360" y="150" width="320" height="96" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="520" y="184" text-anchor="middle" font-size="20" font-weight="bold" fill="#15803d">① 방화벽 외부 NIDS</text>
+    <text x="520" y="212" text-anchor="middle" font-size="16" fill="#166534">방화벽 도달 전 트래픽 분석</text>
+    <text x="520" y="236" text-anchor="middle" font-size="16" fill="#166534">차단될 공격 시도까지 관찰 가능</text>
 
-    <text x="542" y="354" font-size="21" font-weight="bold"
-          fill="#15803d">② 방화벽 내부 NIDS</text>
-    <text x="542" y="380" font-size="16" fill="#166534">
-      방화벽 통과 트래픽 분석
-    </text>
-    <text x="542" y="402" font-size="14" fill="#166534">
-      실제 유입되는 위협에 집중
-    </text>
+    <!-- Right lower box -->
+    <path d="M175 370 H340" stroke="#16a34a" stroke-width="4" stroke-dasharray="10 7"/>
+    <rect x="360" y="320" width="320" height="96" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="520" y="354" text-anchor="middle" font-size="20" font-weight="bold" fill="#15803d">② 방화벽 내부 NIDS</text>
+    <text x="520" y="382" text-anchor="middle" font-size="16" fill="#166534">방화벽 통과 트래픽 분석</text>
+    <text x="520" y="406" text-anchor="middle" font-size="16" fill="#166534">실제 유입되는 위협에 집중</text>
 
-    <!-- Internal Network -->
-    <rect x="65" y="440" width="250" height="55" rx="8"
-          fill="#dbeafe" stroke="#2563eb"/>
-
-    <text x="190" y="474" font-size="20" font-weight="bold"
-          fill="#1d4ed8">Internal Network</text>
-
-    <!-- Legend -->
-    <path d="M390 469 H430" stroke="#16a34a"
-          stroke-width="3" stroke-dasharray="7 5"/>
-    <text x="445" y="474" text-anchor="start"
-          font-size="15" fill="#475569">복제 트래픽</text>
-
+    <!-- legend -->
+    <path d="M370 454 H430" stroke="#16a34a" stroke-width="4" stroke-dasharray="10 7"/>
+    <text x="442" y="460" font-size="15" fill="#334155">복제 트래픽</text>
   </g>
 </svg>
